@@ -17,15 +17,15 @@ const Posts: NextPage<IPostsPageProps> = ({ posts }) => {
 
       <h1>All posts</h1>
 
-      {!posts.length ? (
+      {/* {!posts.length ? (
         <h2>Unfortunately, the list of posts is still empty 😢</h2>
       ) : (
         <>
-          {/* {posts.map((list) => (
+          {posts.map((list) => (
             <PostsList key={list.year} year={list.year} posts={list.posts} />
-          ))} */}
+          ))}
         </>
-      )}
+      )} */}
     </>
   );
 };
