@@ -1,4 +1,3 @@
-// import styled from 'styled-components';
 import { formatTime } from '../../../utils';
 
 interface IDateTime {

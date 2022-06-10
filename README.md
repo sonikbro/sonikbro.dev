@@ -5,8 +5,8 @@
 ## TODO
 
 - [ ] fix styles/layout;
+- [ ] fix dark/light styles/layout;
 - [ ] add head meta;
-- [ ] provide own domain;
 - [ ] fix Readme;
 - [ ] publish
 - [ ] add blurDataURL images;
@@ -16,6 +16,7 @@
 - [x] migrate pages
 - [x] migrate api
 - [x] migrate content
+- [x] provide own domain
 
 ## Getting Started
 

@@ -24,16 +24,16 @@
     content: '·';
   }
 
-  .tagItem {
+  .button-primary {
     border-radius: 1em;
     border: 2px solid theme('colors.primaryColor');
   }
 
-  .tagItem:hover {
+  .button-primary:hover {
     background-color: theme('colors.darkPrimaryColor');
   }
 
-  .tagItem:focus-within {
+  .button-primary:focus-within {
     background: theme('colors.darkPrimaryColor');
     outline: unset;
     border: 2px solid theme('colors.primaryColor');

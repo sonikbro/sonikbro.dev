@@ -32,7 +32,7 @@ const Header = () => {
   return (
     <Container>
       <nav>
-        <ul className="pl-0 my-[.8em]">
+        <ul className="pl-0 my-[.8em] -ml-2">
           {paths.map((link) => (
             <li
               key={link.link}
@@ -41,7 +41,7 @@ const Header = () => {
               }`}
             >
               <Link href={link.link}>
-                <a className="no-underline p-1 mr-3">{link.label}</a>
+                <a className="no-underline p-2 mr-3">{link.label}</a>
               </Link>
             </li>
           ))}

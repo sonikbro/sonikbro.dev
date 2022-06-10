@@ -3,21 +3,6 @@ export const enum PATH {
   USES = 'content/uses',
 }
 
-// export type TTheme = {
-//   color: string;
-//   primaryColor: string;
-//   lightPrimaryColor: string;
-//   darkPrimaryColor: string;
-//   bgColor: string;
-//   muteColor: string;
-
-//   sizes: TThemeSizes;
-// };
-
-// export type TThemeSizes = {
-//   tablet: string;
-// };
-
 export type TListItem = {
   link: string;
   label: string;

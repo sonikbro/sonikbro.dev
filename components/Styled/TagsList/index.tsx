@@ -22,7 +22,7 @@ const TagsList: React.FC<ITagsList> = ({ items, size }) => {
         >
           <Link href={`/tags/${tag}`}>
             <a
-              className={`no-underline tagItem bgColor-text primaryColor-bg ${
+              className={`button-primary no-underline bgColor-text primaryColor-bg ${
                 size && size === 'small' ? 'px-[0.3em]' : 'px-[0.5em]'
               }`}
             >
