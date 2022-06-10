@@ -1,6 +1,5 @@
-import React from 'react';
 // import styled from 'styled-components';
-// import { formatTime } from '../../../utils';
+import { formatTime } from '../../../utils';
 
 interface IDateTime {
   date: string;
@@ -8,8 +7,7 @@ interface IDateTime {
 
 const DateTime: React.FC<IDateTime> = ({ date }) => {
   return (
-    // <time dateTime={new Date(date).toISOString()}>{formatTime(date)}</time>
-    <></>
+    <time dateTime={new Date(date).toISOString()}>{formatTime(date)}</time>
   );
 };
 

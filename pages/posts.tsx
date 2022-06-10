@@ -1,23 +1,24 @@
 import type { NextPage } from 'next';
 import NextHead from 'next/head';
-// import PostsList from '../components/PostsList';
-// import { TListPosts } from '../types';
-// import { siteData } from '../data';
-// import { getAllSortedPosts } from './api';
+import PostsList from '../components/PostsList';
+import { TListPosts } from '../types';
+import { siteData } from '../data';
+import { getAllSortedPosts } from './api';
 
 interface IPostsPageProps {
-  //   posts: TListPosts[];
-  posts: any;
+  posts: TListPosts[];
 }
 
 const Posts: NextPage<IPostsPageProps> = ({ posts }) => {
   return (
     <>
-      <NextHead>{/* <title>{siteData.name} · posts</title> */}</NextHead>
+      <NextHead>
+        <title>{siteData.name} · posts</title>
+      </NextHead>
 
       <h1>All posts</h1>
 
-      {/* {!posts.length ? (
+      {!posts.length ? (
         <h2>Unfortunately, the list of posts is still empty 😢</h2>
       ) : (
         <>
@@ -25,19 +26,19 @@ const Posts: NextPage<IPostsPageProps> = ({ posts }) => {
             <PostsList key={list.year} year={list.year} posts={list.posts} />
           ))}
         </>
-      )} */}
+      )}
     </>
   );
 };
 
 export default Posts;
 
-// export async function getStaticProps() {
-//   const posts: TListPosts[] = await getAllSortedPosts();
+export async function getStaticProps() {
+  const posts: TListPosts[] = await getAllSortedPosts();
 
-//   return {
-//     props: {
-//       posts,
-//     },
-//   };
-// }
+  return {
+    props: {
+      posts,
+    },
+  };
+}

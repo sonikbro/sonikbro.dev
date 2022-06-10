@@ -1,10 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-// import styled from 'styled-components';
-// import { IPostsItemMeta } from '../../types';
-// import PostMetaWraper from '../Styled/PostMetaWraper';
-// import DateTime from '../Styled/DateTime';
-// import TagsList from '../Styled/TagsList';
+import { IPostsItemMeta } from '../../types';
+import PostMetaWraper from '../Styled/PostMetaWraper';
+import DateTime from '../Styled/DateTime';
+import TagsList from '../Styled/TagsList';
 
 // const List = styled.ul``;
 
@@ -15,8 +14,7 @@ import Link from 'next/link';
 // `;
 
 interface IPostsList {
-  //   posts: IPostsItemMeta[];
-  posts: any[];
+  posts: IPostsItemMeta[];
   year: string;
 }
 
@@ -24,9 +22,9 @@ const PostsList: React.FC<IPostsList> = ({ year, posts }) => {
   return (
     <>
       <h3>{year}</h3>
-      {/* <List>
+      <ul>
         {posts.map((post) => (
-          <PostItem key={post.slug}>
+          <li key={post.slug}>
             <Link href={`/posts/${post.slug}`}>
               <a>{post.title}</a>
             </Link>
@@ -34,9 +32,9 @@ const PostsList: React.FC<IPostsList> = ({ year, posts }) => {
               <DateTime date={post.date} />
               <TagsList size="small" items={post.tags} />
             </PostMetaWraper>
-          </PostItem>
+          </li>
         ))}
-      </List> */}
+      </ul>
     </>
   );
 };

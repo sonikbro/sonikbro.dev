@@ -1,5 +1,4 @@
 import React from 'react';
-// import styled from 'styled-components';
 import Link from 'next/link';
 
 // const TagsWrapper = styled.ul`
@@ -46,16 +45,15 @@ const TagsList: React.FC<ITagsList> = ({ items, size }) => {
   }
 
   return (
-    <></>
-    // <TagsWrapper>
-    //   {items.map((tag: string) => (
-    //     <Tag size={size} key={tag}>
-    //       <Link href={`/tags/${tag}`}>
-    //         <a># {tag}</a>
-    //       </Link>
-    //     </Tag>
-    //   ))}
-    // </TagsWrapper>
+    <ul>
+      {items.map((tag: string) => (
+        <li key={tag}>
+          <Link href={`/tags/${tag}`}>
+            <a># {tag}</a>
+          </Link>
+        </li>
+      ))}
+    </ul>
   );
 };
 
