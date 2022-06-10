@@ -19,7 +19,7 @@ const Footer = () => {
       <Divider />
       <footer>
         <Container>
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between spacing">
             <span>
               © {siteData.currentYear} / {siteData.author}
             </span>

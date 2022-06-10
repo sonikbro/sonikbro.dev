@@ -10,6 +10,20 @@
     transform-origin: 70% 70%;
   }
 
+  .divider {
+    border: 0;
+    border-bottom-color: currentcolor;
+    border-bottom-style: none;
+    border-bottom-width: 0px;
+    border-bottom: 1px solid theme('colors.muteColor');
+    outline: 0;
+  }
+
+  .spacing {
+    margin-bottom: calc(1em + 4vw);
+    margin-top: calc(1em + 4vw);
+  }
+
   @keyframes waveAnimation {
     0%,
     60%,

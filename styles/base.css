@@ -73,9 +73,9 @@ h5,
 h6 {
   line-height: 1.1;
   letter-spacing: -0.02em;
-  margin-top: 1em;
+  margin-top: 0.8em;
   margin-bottom: 0.6em;
-  scroll-margin-top: 1em;
+  scroll-margin-top: 0.8em;
 }
 
 h1 {
@@ -332,6 +332,11 @@ label {
   max-width: 50ch;
 }
 
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
 fieldset {
   margin: 0;
   padding: 0;
@@ -341,6 +346,7 @@ legend {
   padding: 0;
 }
 
+ul,
 li {
   margin-bottom: 0.3em;
 }
