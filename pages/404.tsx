@@ -17,10 +17,7 @@ const ErrorPage: NextPage = () => {
       <NextHead>
         <title>Page Not Be Found</title>
       </NextHead>
-      <h1>
-        4 <span>😢</span> 4
-      </h1>
-      {/* <ErrorWrapper>
+      <div>
         <h1>
           4 <span>😢</span> 4
         </h1>
@@ -34,7 +31,7 @@ const ErrorPage: NextPage = () => {
             <a>Back to homepage</a>
           </Link>
         </p>
-      </ErrorWrapper> */}
+      </div>
     </>
   );
 };

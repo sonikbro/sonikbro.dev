@@ -33,8 +33,7 @@ interface IStyledButton {
 }
 
 const Button: React.FC<IStyledButton> = ({ children, onClick }) => {
-  //   return <StyledButton onClick={onClick}>{children}</StyledButton>;
-  return <></>;
+  return <button onClick={onClick}>{children}</button>;
 };
 
 export default Button;

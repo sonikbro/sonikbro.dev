@@ -1,9 +1,8 @@
 // import styled from 'styled-components';
-// import { TListItem } from '../../../types';
+import { TListItem } from '../../../types';
 
 interface IStyledButton {
-  // items: TListItem[];
-  items: any[];
+  items: TListItem[];
 }
 
 const LinksList: React.FC<IStyledButton> = ({ items }) => {
@@ -13,13 +12,13 @@ const LinksList: React.FC<IStyledButton> = ({ items }) => {
 
   return (
     <ul>
-      {/* {items.map((item: TListItem) => (
+      {items.map((item) => (
         <li key={item.label}>
           <a href={item.link} target="_blank" rel="noreferrer">
             {item.label}
           </a>
         </li>
-      ))} */}
+      ))}
     </ul>
   );
 };
