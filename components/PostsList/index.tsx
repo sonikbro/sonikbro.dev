@@ -5,14 +5,6 @@ import PostMetaWraper from '../Styled/PostMetaWraper';
 import DateTime from '../Styled/DateTime';
 import TagsList from '../Styled/TagsList';
 
-// const List = styled.ul``;
-
-// const PostItem = styled.li`
-//   a {
-//     display: inline-block;
-//   }
-// `;
-
 interface IPostsList {
   posts: IPostsItemMeta[];
   year: string;
@@ -26,7 +18,7 @@ const PostsList: React.FC<IPostsList> = ({ year, posts }) => {
         {posts.map((post) => (
           <li key={post.slug}>
             <Link href={`/posts/${post.slug}`}>
-              <a>{post.title}</a>
+              <a className="inline-block">{post.title}</a>
             </Link>
             <PostMetaWraper>
               <DateTime date={post.date} />

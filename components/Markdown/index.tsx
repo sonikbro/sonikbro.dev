@@ -1,10 +1,5 @@
 import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
-// import styled from 'styled-components';
-
-// const PostContent = styled.article`
-//   max-width: 75ch;
-// `;
 
 const MarkdownComponents: object = {
   p: (paragraph: { children?: boolean; node?: any }) => {
@@ -48,7 +43,7 @@ interface IProps {
 
 const Markdown: React.FC<IProps> = ({ children }) => {
   return (
-    <article>
+    <article className="md:max-w-[75ch]">
       <ReactMarkdown linkTarget={'_blank'} components={MarkdownComponents}>
         {children}
       </ReactMarkdown>

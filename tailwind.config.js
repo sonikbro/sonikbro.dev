@@ -12,6 +12,14 @@ module.exports = {
       bgColor: '#f2f2f2',
       muteColor: '#ccc',
     },
+    container: {
+      screens: {
+        sm: '100%',
+        md: '100%',
+        lg: '968px',
+        xl: '1024px',
+      },
+    },
     extend: {},
   },
   plugins: [],

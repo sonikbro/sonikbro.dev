@@ -1,39 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 
-// const TagsWrapper = styled.ul`
-//   max-width: unset;
-//   display: inline-block;
-//   padding-left: 0;
-// `;
-
-// const Tag = styled.li<{ size?: 'small' | 'big' }>`
-//   display: inline-block;
-//   margin-right: ${({ size }) => (size && size === 'small' ? '0.3em' : '0.5em')};
-//   font-size: ${({ size }) => (size && size === 'small' ? '.75em' : 'inherit')};
-//   cursor: pointer;
-
-//   a {
-//     padding: ${({ size }) =>
-//       size && size === 'small' ? '0 0.3em' : '0 0.5em'};
-//     background: ${({ theme }) => theme.primaryColor};
-//     border-radius: 1em;
-//     border: 2px solid ${({ theme }) => theme.primaryColor};
-//     color: ${({ theme }) => theme.bgColor};
-//     text-decoration: none;
-
-//     :hover {
-//       background: ${({ theme }) => theme.darkPrimaryColor};
-//     }
-
-//     :focus {
-//       background: ${({ theme }) => theme.darkPrimaryColor};
-//       outline: unset;
-//       border: 2px solid ${({ theme }) => theme.primaryColor};
-//     }
-//   }
-// `;
-
 interface ITagsList {
   items: string[] | undefined | null;
   size?: 'small' | 'big';
@@ -45,11 +12,22 @@ const TagsList: React.FC<ITagsList> = ({ items, size }) => {
   }
 
   return (
-    <ul>
+    <ul className="max-w-full inline-block pl-0 my-0">
       {items.map((tag: string) => (
-        <li key={tag}>
+        <li
+          className={`inline-block my-0 ${
+            size && size === 'small' ? 'mr-[0.3em] text-[.75em]' : 'mr-[0.5em]'
+          }`}
+          key={tag}
+        >
           <Link href={`/tags/${tag}`}>
-            <a># {tag}</a>
+            <a
+              className={`no-underline tagItem bgColor-text primaryColor-bg ${
+                size && size === 'small' ? 'px-[0.3em]' : 'px-[0.5em]'
+              }`}
+            >
+              # {tag}
+            </a>
           </Link>
         </li>
       ))}

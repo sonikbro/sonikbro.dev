@@ -14,9 +14,10 @@ const SinglePost: NextPage<IPostProps> = ({ data, content }) => {
   return (
     <>
       <NextHead>
-        <title>{data.title} · {siteData.name}</title>
+        <title>
+          {data.title} · {siteData.name}
+        </title>
       </NextHead>
-      <h1>SinglePost</h1>
 
       <Post frontmatter={data} markdown={content} type="post" />
     </>

@@ -1,6 +1,6 @@
 import Divider from '../Styled/Divider';
 import { siteData } from '../../data';
-import Container from '../Container';
+import Container from '../Styled/Container';
 import ToggleTheme from '../ToggleTheme';
 
 // const FooterSection = styled.footer`

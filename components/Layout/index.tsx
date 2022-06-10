@@ -1,6 +1,6 @@
 import React from 'react';
 import Meta from '../Meta';
-import Container from '../Container';
+import Container from '../Styled/Container';
 import Footer from '../Footer';
 import Header from '../Header';
 

@@ -3,13 +3,6 @@
 @tailwind utilities;
 
 @layer components {
-  .wave-animation {
-    animation-name: waveAnimation;
-    animation-duration: 2.5s;
-    animation-iteration-count: infinite;
-    transform-origin: 70% 70%;
-  }
-
   .divider {
     border: 0;
     border-bottom-color: currentcolor;
@@ -22,6 +15,35 @@
   .spacing {
     margin-bottom: calc(1em + 4vw);
     margin-top: calc(1em + 4vw);
+  }
+
+  .postMetaWraper > :not(:last-child)::after {
+    @apply inline-block py-0 px-[0.5em];
+    color: theme('colors.primaryColor');
+    font-size: 1.2rem;
+    content: '·';
+  }
+
+  .tagItem {
+    border-radius: 1em;
+    border: 2px solid theme('colors.primaryColor');
+  }
+
+  .tagItem:hover {
+    background-color: theme('colors.darkPrimaryColor');
+  }
+
+  .tagItem:focus-within {
+    background: theme('colors.darkPrimaryColor');
+    outline: unset;
+    border: 2px solid theme('colors.primaryColor');
+  }
+
+  .wave-animation {
+    animation-name: waveAnimation;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
   }
 
   @keyframes waveAnimation {

@@ -73,7 +73,7 @@ h5,
 h6 {
   line-height: 1.1;
   letter-spacing: -0.02em;
-  margin-top: 0.8em;
+  margin-top: 1em;
   margin-bottom: 0.6em;
   scroll-margin-top: 0.8em;
 }
@@ -416,4 +416,20 @@ img,
 video {
   max-width: 100%;
   height: auto;
+}
+
+.bgColor-text {
+  color: theme('colors.bgColor');
+}
+
+.primaryColor-text {
+  color: theme('colors.primaryColor');
+}
+
+.primaryColor-bg {
+  background-color: theme('colors.primaryColor');
+}
+
+.darkPrimaryColor-bg {
+  background-color: theme('colors.darkPrimaryColor');
 }
