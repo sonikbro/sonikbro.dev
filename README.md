@@ -1,13 +1,9 @@
-# A statically generated blog example using Next.js, Markdown, and TypeScript
+# A statically generated blog using Next.js, Markdown, and TypeScript
 
 [![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner-direct-single.svg)](https://stand-with-ukraine.pp.ua)
 
 ## TODO
 
-- [ ] migrate components
-- [ ] migrate pages
-- [ ] migrate api
-- [ ] migrate content
 - [ ] fix styles/layout;
 - [ ] add head meta;
 - [ ] provide own domain;
@@ -16,6 +12,10 @@
 - [ ] add blurDataURL images;
 - [ ] fix eslint;
 - [x] add toggle theme;
+- [x] migrate components
+- [x] migrate pages
+- [x] migrate api
+- [x] migrate content
 
 ## Getting Started
 

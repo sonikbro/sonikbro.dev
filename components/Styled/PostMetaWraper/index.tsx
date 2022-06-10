@@ -1,5 +1,3 @@
-// import styled from 'styled-components';
-
 // const PostMetaWraper = styled.div`
 //   & > :not(:last-child)::after {
 //     display: inline-block;

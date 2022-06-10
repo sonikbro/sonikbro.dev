@@ -1,8 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Container from '../Container';
-// import styled from 'styled-components';
-// import Container from '../Styled/Container';
 
 // const HeaderWrapper = styled.header`
 //   ul {
@@ -54,45 +52,24 @@ const Header = () => {
   ];
 
   return (
-    <>
-      <Container>
-        <div className="text-2xl md:text-4xl font-bold tracking-tight md:tracking-tighter leading-tight mb-20 mt-8">
+    <Container>
+      <nav>
+        <ul className="text-2xl md:text-4xl font-bold tracking-tight md:tracking-tighter leading-tight mb-20 mt-8">
           {paths.map((link) => (
-            <Link key={link.link} href={link.link}>
-              <a className="hover:underline mr-3">{link.label}</a>
-            </Link>
+            <li
+              key={link.link}
+              className={`inline-block ${
+                router.pathname == link.link ? 'underline' : ''
+              }`}
+            >
+              <Link href={link.link}>
+                <a className="hover:underline mr-3">{link.label}</a>
+              </Link>
+            </li>
           ))}
-        </div>
-      </Container>
-      {/* <HeaderWrapper>
-        <Container>
-          <nav>
-            <ul>
-              <NavLink active={false}>
-                <Link href="/">
-                  <a>Anatolii</a>
-                </Link>
-              </NavLink>
-              <NavLink active={router.pathname == '/posts'}>
-                <Link href="/posts">
-                  <a>Posts</a>
-                </Link>
-              </NavLink>
-              <NavLink active={router.pathname == '/uses'}>
-                <Link href="/uses">
-                  <a>Uses</a>
-                </Link>
-              </NavLink>
-              <NavLink active={router.pathname == '/contact'}>
-                <Link href="/contact">
-                  <a>Contact</a>
-                </Link>
-              </NavLink>
-            </ul>
-          </nav>
-        </Container>
-      </HeaderWrapper> */}
-    </>
+        </ul>
+      </nav>
+    </Container>
   );
 };
 

@@ -1,5 +1,5 @@
-const SectionSeparator = () => {
-  return <hr className="border-neutral-200 mt-28 mb-24" />;
+const Divider = () => {
+  return <hr className="border-neutral-200 mt-5 mb-5" />;
 };
 
-export default SectionSeparator;
+export default Divider;

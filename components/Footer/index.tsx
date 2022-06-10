@@ -1,8 +1,7 @@
-// import styled from 'styled-components';
-// import Divider from '../Styled/Divider';
-// import Container from '../Styled/Container';
-// import { siteData } from '../../data';
-// import ToggleTheme from '../Styled/ToggleTheme';
+import Divider from '../Styled/Divider';
+import { siteData } from '../../data';
+import Container from '../Container';
+import ToggleTheme from '../ToggleTheme';
 
 // const FooterSection = styled.footer`
 //   padding: 2rem 0;
@@ -14,31 +13,20 @@
 //   align-items: center;
 // `;
 
-import Container from '../Container';
-import ToggleTheme from '../ToggleTheme';
-
 const Footer = () => {
   return (
     <>
+      <Divider />
       <footer>
         <Container>
-          <div>Footer</div>
-          <div>
-            <ToggleTheme />
-          </div>
-        </Container>
-      </footer>
-      {/* <Divider />
-      <FooterSection>
-        <Container>
-          <FooterItem>
+          <div className="flex items-center justify-between">
             <span>
               © {siteData.currentYear} / {siteData.author}
             </span>
             <ToggleTheme />
-          </FooterItem>
+          </div>
         </Container>
-      </FooterSection> */}
+      </footer>
     </>
   );
 };

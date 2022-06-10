@@ -1,5 +1,5 @@
 import Head from 'next/head';
-// import { siteData } from '../../data';
+import { siteData } from '../../data';
 
 function HeadMeta() {
   return (
@@ -8,14 +8,14 @@ function HeadMeta() {
         name="viewport"
         content="width=device-width, initial-scale=1"
       ></meta>
-      {/* <title>{siteData.name}</title>
+      <title>{siteData.name}</title>
       <link rel="preconnect" href={siteData.domain} crossOrigin=""></link>
       <meta property="og:locale" content="en_US"></meta>
       <meta property="og:type" content="article"></meta>
       <meta property="og:url" content={siteData.domain}></meta>
       <meta property="og:site_name" content={siteData.name}></meta>
       <meta property="og:description" content={siteData.description}></meta>
-      <link rel="canonical" href={siteData.domain}></link> */}
+      <link rel="canonical" href={siteData.domain}></link>
     </Head>
   );
 }

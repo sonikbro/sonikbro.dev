@@ -1,4 +1,3 @@
-// import styled from 'styled-components';
 import { TListItem } from '../../../types';
 
 interface IStyledButton {

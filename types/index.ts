@@ -3,20 +3,20 @@ export const enum PATH {
   USES = 'content/uses',
 }
 
-export type TTheme = {
-  color: string;
-  primaryColor: string;
-  lightPrimaryColor: string;
-  darkPrimaryColor: string;
-  bgColor: string;
-  muteColor: string;
+// export type TTheme = {
+//   color: string;
+//   primaryColor: string;
+//   lightPrimaryColor: string;
+//   darkPrimaryColor: string;
+//   bgColor: string;
+//   muteColor: string;
 
-  sizes: TThemeSizes;
-};
+//   sizes: TThemeSizes;
+// };
 
-export type TThemeSizes = {
-  tablet: string;
-};
+// export type TThemeSizes = {
+//   tablet: string;
+// };
 
 export type TListItem = {
   link: string;
