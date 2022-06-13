@@ -27,7 +27,7 @@ const SinglePost: NextPage<IPostProps> = ({ data, content }) => {
 export default SinglePost;
 
 export async function getStaticPaths() {
-  const filesInPosts = await getPostSlugs();
+  const filesInPosts = getPostSlugs();
 
   const paths = filesInPosts.map((filename) => ({
     params: { slug: filename.slice(0, filename.indexOf('.')) },
@@ -37,7 +37,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {
-  const { data, content } = await getPostBySlug(params.slug);
+  const { data, content } = getPostBySlug(params.slug);
 
   return {
     props: { data, content },

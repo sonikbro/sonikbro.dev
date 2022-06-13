@@ -15,7 +15,7 @@ const Index: NextPage = () => {
         with people.
       </p>
       <p>
-        👨‍💻 I work at{' '}
+        👨‍💻 I work in{' '}
         <a href="https://www.luxoft.com/" target="_blank" rel="noreferrer">
           Luxoft
         </a>

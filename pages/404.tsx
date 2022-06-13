@@ -1,15 +1,6 @@
 import type { NextPage } from 'next';
 import Link from 'next/link';
 import NextHead from 'next/head';
-// import styled from 'styled-components';
-
-// const ErrorWrapper = styled.div`
-//   text-align: center;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   margin-top: 20%;
-// `;
 
 const ErrorPage: NextPage = () => {
   return (
@@ -17,7 +8,7 @@ const ErrorPage: NextPage = () => {
       <NextHead>
         <title>Page Not Be Found</title>
       </NextHead>
-      <div>
+      <section className="flex flex-col text-center items-center">
         <h1>
           4 <span>😢</span> 4
         </h1>
@@ -31,7 +22,7 @@ const ErrorPage: NextPage = () => {
             <a>Back to homepage</a>
           </Link>
         </p>
-      </div>
+      </section>
     </>
   );
 };

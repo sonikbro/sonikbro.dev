@@ -36,12 +36,12 @@ const Header = () => {
           {paths.map((link) => (
             <li
               key={link.link}
-              className={`inline-block mb-0 ${
+              className={`inline-block mb-0 mr-2 md:mr-3 ${
                 router.pathname == link.link ? 'underline' : ''
               }`}
             >
               <Link href={link.link}>
-                <a className="no-underline p-2 mr-3">{link.label}</a>
+                <a className="no-underline p-1 md:p-2">{link.label}</a>
               </Link>
             </li>
           ))}

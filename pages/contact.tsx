@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { SyntheticEvent, useState } from 'react';
 import type { NextPage } from 'next';
 import NextHead from 'next/head';
 import Button from '../components/Styled/Button';
@@ -8,7 +8,11 @@ import { listEmail, listSocial, siteData } from '../data';
 const Contact: NextPage = () => {
   const [text, setText] = useState<string>('Copy email');
 
-  const handleClick = (): void => {
+  const handleClick = (
+    event: SyntheticEvent<HTMLButtonElement, Event>
+  ): void => {
+    event.preventDefault();
+
     navigator?.clipboard.writeText(siteData.email);
     setText('Email copied');
 
@@ -26,7 +30,7 @@ const Contact: NextPage = () => {
       <p>With any questions or requests or just greetings, write here:</p>
       <LinksList items={listEmail} />
       <p>
-        <Button onClick={handleClick}>{text}</Button>
+        <Button onClick={(event) => handleClick(event)}>{text}</Button>
       </p>
       <h2>My social networks</h2>
       <p>

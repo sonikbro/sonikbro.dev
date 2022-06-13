@@ -4,7 +4,7 @@ export const siteData: TSiteData = {
   name: 'sonikbro.dev',
   domain: 'https://sonikbro.dev/',
   author: 'Anatolii Melnyk',
-  description: 'Hi! I’m Anatolii Melnyk, a Software Developer from Ukraine',
+  description: 'Hi! I’m Anatolii Melnyk, a software developer from Ukraine',
   currentYear: new Date().getFullYear(),
   email: 'toliamel@gmail.com',
 };

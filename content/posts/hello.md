@@ -6,11 +6,11 @@ tags:
   - life
 ---
 
-Hi! I’m Anatolii Melnyk, a Software Developer from Ukraine.
+Hi! I’m Anatolii Melnyk, a software developer from Ukraine.
 
 👋 About me: I know Frontend and UI/UX, I love React and TypeScript. I like to find solutions to complex problems that will help other people. I quickly adapt to new technologies and communicate well with people.
 
-👨‍💻 I work remotely at Luxoft. I shift data into objects and write code for the enterprise. I have been a professional developer since 2019. During this time, I learned to find a common language with people in the team, defend my point of view and be open to others.
+👨‍💻 I work remotely in Luxoft. I shift data into objects and write code for the enterprise. I have been a professional developer since 2019. During this time, I learned to find a common language with people in the team, defend my point of view and be open to others.
 
 🇺🇦 I was born in western Ukraine but moved to Kyiv in 2015 when I entered the university and started studying Computer Science.
 

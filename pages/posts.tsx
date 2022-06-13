@@ -34,7 +34,7 @@ const Posts: NextPage<IPostsPageProps> = ({ posts }) => {
 export default Posts;
 
 export async function getStaticProps() {
-  const posts: TListPosts[] = await getAllSortedPosts();
+  const posts: TListPosts[] = getAllSortedPosts();
 
   return {
     props: {

@@ -25,7 +25,6 @@
   }
 
   .button-primary {
-    border-radius: 1em;
     border: 2px solid theme('colors.primaryColor');
   }
 
@@ -33,12 +32,11 @@
     background-color: theme('colors.darkPrimaryColor');
   }
 
-  .button-primary:focus-within {
-    background: theme('colors.darkPrimaryColor');
+  .button-primary:focus-visible {
     outline: unset;
+    background: theme('colors.darkPrimaryColor');
     border: 2px solid theme('colors.primaryColor');
   }
-
   .wave-animation {
     animation-name: waveAnimation;
     animation-duration: 2.5s;

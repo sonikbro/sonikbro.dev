@@ -31,7 +31,7 @@ const TagsListPage: NextPage<ITagsListPage> = ({ posts, tag }) => {
 export default TagsListPage;
 
 export async function getStaticPaths() {
-  const postTags = await getPostTags();
+  const postTags = getPostTags();
 
   const paths = postTags.map((tag) => ({
     params: { tag: tag.toString() },
@@ -42,7 +42,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }: { params: { tag: string } }) {
   const tag = params.tag;
-  const posts: TListPosts[] = await getAllSortedPosts(tag);
+  const posts: TListPosts[] = getAllSortedPosts(tag);
 
   return {
     props: {

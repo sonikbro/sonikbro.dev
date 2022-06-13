@@ -1,14 +1,9 @@
-/*
-1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
-2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
-*/
-
 *,
 ::before,
 ::after {
-  box-sizing: border-box; /* 1 */
-  border-width: 0; /* 2 */
-  border-style: solid; /* 2 */
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
   border-color: theme('borderColor.DEFAULT', currentColor); /* 2 */
 }
 
@@ -16,13 +11,6 @@
 ::after {
   --tw-content: '';
 }
-
-/*
-1. Use a consistent sensible line-height in all browsers.
-2. Prevent adjustments of font size after orientation changes in iOS.
-3. Use a more readable tab size.
-4. Use the user's configured `sans` font-family by default.
-*/
 
 html {
   line-height: 1.618; /* 1 */
@@ -85,38 +73,24 @@ h1 {
   margin-bottom: 1em;
 }
 
-/*
-1. Add the correct height in Firefox.
-2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
-3. Ensure horizontal rules are visible by default.
-*/
-
 hr {
   height: 0; /* 1 */
   color: inherit; /* 2 */
   border-top-width: 1px; /* 3 */
 }
 
-/*
-Add the correct text decoration in Chrome, Edge, and Safari.
-*/
-
 abbr:where([title]) {
   text-decoration: underline dotted;
 }
-
-/*
-Remove the default font size and weight for headings.
-*/
-
-/*
-Reset links to optimize for opt-in styling instead of opt-out.
-*/
 
 a {
   background-color: transparent;
   text-decoration: underline;
   color: theme('colors.primaryColor');
+}
+
+[data-theme='dark'] img {
+  filter: brightness(0.8) contrast(1.2);
 }
 
 a:hover {
@@ -128,10 +102,6 @@ a:focus-visible {
   background-color: theme('colors.primaryColor');
   color: theme('colors.bgColor');
   outline: theme('colors.primaryColor') 0.15em solid;
-}
-
-[data-theme='dark'] img {
-  filter: brightness(0.8) contrast(1.2);
 }
 
 /*
@@ -322,14 +292,16 @@ summary {
 Removes the default spacing and border for appropriate elements.
 */
 
-p,
-ol,
-ul,
-blockquote,
-pre,
-form,
-label {
-  max-width: 50ch;
+@media (min-width: theme('container.screens.lg')) {
+  p,
+  ol,
+  ul,
+  blockquote,
+  pre,
+  form,
+  label {
+    max-width: 50ch;
+  }
 }
 
 p {
@@ -417,6 +389,12 @@ img,
 video {
   max-width: 100%;
   height: auto;
+}
+
+@media (max-width: theme('container.screens.lg')) {
+  .mobonly {
+    display: none;
+  }
 }
 
 .bgColor-text {
