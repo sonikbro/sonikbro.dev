@@ -18,7 +18,7 @@ function HeadMeta() {
       {/* <meta property="og:image" content="HOME_OG_IMAGE_URL" /> */}
       <meta name="description" content={siteData.description} />
       <link rel="canonical" href={siteData.domain}></link>
-      <meta name="theme-color" content="#000000" />
+      <meta name="theme-color" content="var(--bgColor)" />
       <link
         rel="apple-touch-icon"
         sizes="180x180"

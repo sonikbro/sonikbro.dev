@@ -34,9 +34,16 @@ html {
     'Segoe UI Symbol',
     'Noto Color Emoji'
   );
-  font-size: calc(0.95em + 0.2vw);
+  font-size: 1.1em;
   color: theme('colors.color');
   background-color: theme('colors.bgColor');
+}
+
+@media (min-width: theme('container.screens.lg')) {
+  html {
+    font-size: calc(0.95em + 0.2vw);
+    line-height: 1.618;
+  }
 }
 
 body {
@@ -88,15 +95,17 @@ a {
   filter: brightness(0.8) contrast(1.2);
 }
 
-a:hover {
-  background-color: theme('colors.lightPrimaryColor');
-  outline: 0.15em solid theme('colors.lightPrimaryColor');
-}
+@media (min-width: theme('container.screens.lg')) {
+  a:hover {
+    background-color: theme('colors.lightPrimaryColor');
+    outline: 0.15em solid theme('colors.lightPrimaryColor');
+  }
 
-a:focus-visible {
-  background-color: theme('colors.primaryColor');
-  color: theme('colors.bgColor');
-  outline: theme('colors.primaryColor') 0.15em solid;
+  a:focus-visible {
+    background-color: theme('colors.primaryColor');
+    color: theme('colors.bgColor');
+    outline: theme('colors.primaryColor') 0.15em solid;
+  }
 }
 
 b,
@@ -211,16 +220,14 @@ summary {
   display: list-item;
 }
 
-@media (min-width: theme('container.screens.lg')) {
-  p,
-  ol,
-  ul,
-  blockquote,
-  pre,
-  form,
-  label {
-    max-width: 50ch;
-  }
+p,
+ol,
+ul,
+blockquote,
+pre,
+form,
+label {
+  max-width: 50ch;
 }
 
 p {
