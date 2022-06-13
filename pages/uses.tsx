@@ -16,14 +16,13 @@ const Uses: NextPage<Props> = ({ data, content }) => {
       <NextHead>
         <title>{siteData.name} · uses</title>
       </NextHead>
-      <h1>Uses</h1>
       <Post frontmatter={data} markdown={content} type="page" />
     </>
   );
 };
 
 export async function getStaticProps() {
-  const { data, content } = await getContentByFile(PATH.USES, 'index.md');
+  const { data, content } = getContentByFile(PATH.USES, 'index.md');
 
   return {
     props: { data, content },

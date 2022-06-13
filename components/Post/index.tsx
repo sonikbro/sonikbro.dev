@@ -16,7 +16,7 @@ const Post: React.FC<IPost> = ({ markdown, frontmatter, type }) => {
   if (type === 'page') {
     return (
       <div>
-        <h2>{frontmatter.title}</h2>
+        <h1>{frontmatter.title}</h1>
         <p>
           <span>Last update: </span>
           <DateTime date={frontmatter.date} />
@@ -30,7 +30,7 @@ const Post: React.FC<IPost> = ({ markdown, frontmatter, type }) => {
   return (
     <>
       <div>
-        <h2>{frontmatter.title}</h2>
+        <h1>{frontmatter.title}</h1>
         <p>{frontmatter.description}</p>
         <PostMetaWraper>
           <DateTime date={frontmatter.date} />
