@@ -4,19 +4,18 @@
 
 ## TODO
 
-- [ ] fix styles/layout;
 - [ ] fix dark/light styles/layout;
-- [ ] add head meta;
+- [ ] fix styles/layout;
 - [ ] fix Readme;
 - [ ] publish
 - [ ] add blurDataURL images;
-- [ ] fix eslint;
 - [x] add toggle theme;
 - [x] migrate components
 - [x] migrate pages
 - [x] migrate api
 - [x] migrate content
 - [x] provide own domain
+- [x] add head meta;
 
 ## Getting Started
 
