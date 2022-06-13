@@ -34,14 +34,15 @@ const Header = () => {
       <nav>
         <ul className="pl-0 my-[.8em] -ml-2">
           {paths.map((link) => (
-            <li
-              key={link.link}
-              className={`inline-block mb-0 mr-2 md:mr-3 ${
-                router.pathname == link.link ? 'underline' : ''
-              }`}
-            >
+            <li key={link.link} className="inline-block mb-0 mr-2 md:mr-3">
               <Link href={link.link}>
-                <a className="no-underline p-1 md:p-2">{link.label}</a>
+                <a
+                  className={`p-1 md:p-2 ${
+                    router.pathname == link.link ? 'underline' : 'no-underline '
+                  }`}
+                >
+                  {link.label}
+                </a>
               </Link>
             </li>
           ))}

@@ -1,14 +1,10 @@
 interface IProps {
-  hideMobile?: boolean;
+  classes?: string;
 }
 
-const Divider = ({ hideMobile }: IProps) => {
+const Divider = ({ classes }: IProps) => {
   return (
-    <hr
-      className={`h-px divider mb-[calc(1.8em+0.6vw)] mx-0 ${
-        hideMobile ? 'mobonly' : ''
-      }`}
-    />
+    <hr className={`h-px divider mb-[calc(1.8em+0.6vw)] mx-0 ${classes}`} />
   );
 };
 

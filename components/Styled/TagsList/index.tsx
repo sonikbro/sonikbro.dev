@@ -15,7 +15,7 @@ const TagsList: React.FC<ITagsList> = ({ items }) => {
       {items.map((tag: string) => (
         <li className="inline-block my-0 mr-[0.5em]" key={tag}>
           <Link href={`/tags/${tag}`}>
-            <a className="button-primary no-underline rounded-2xl bgColor-text primaryColor-bg px-[0.5em]">
+            <a className="button-primary no-underline rounded-2xl text-bgColor bg-primaryColor px-[0.5em]">
               # {tag}
             </a>
           </Link>

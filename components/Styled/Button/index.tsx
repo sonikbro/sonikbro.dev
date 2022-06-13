@@ -8,7 +8,7 @@ export interface IStyledButton {
 const Button: React.FC<IStyledButton> = ({ children, onClick }) => {
   return (
     <button
-      className="button-primary py-2 px-5 w-auto rounded-[5px] tracking-[-0.01em] font-extrabold inline-block cursor-pointer bgColor-text primaryColor-bg"
+      className="button-primary py-2 px-5 w-auto rounded-[5px] tracking-[-0.01em] font-extrabold inline-block cursor-pointer text-bgColor bg-primaryColor"
       onClick={(event) => onClick(event)}
     >
       {children}

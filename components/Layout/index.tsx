@@ -15,7 +15,7 @@ const BasicLayout: React.FC<IBasicLayout> = ({ children }) => {
       <Meta />
       <div className="min-h-screen mb-[calc(1.8em+0.6vw)]">
         <Header />
-        <Divider hideMobile={true} />
+        <Divider classes={'smMax:hidden'} />
         <main>
           <Container>{children}</Container>
         </main>

@@ -1,3 +1,4 @@
+@import url('./colors.css');
 @import url('./base.css');
 @tailwind components;
 @tailwind utilities;
@@ -30,6 +31,7 @@
 
   .button-primary:hover {
     background-color: theme('colors.darkPrimaryColor');
+    border-color: theme('colors.darkPrimaryColor');
   }
 
   .button-primary:focus-visible {
@@ -37,6 +39,7 @@
     background: theme('colors.darkPrimaryColor');
     border: 2px solid theme('colors.primaryColor');
   }
+
   .wave-animation {
     animation-name: waveAnimation;
     animation-duration: 2.5s;

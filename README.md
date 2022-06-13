@@ -4,7 +4,6 @@
 
 ## TODO
 
-- [ ] fix dark/light styles/layout;
 - [ ] fix styles/layout;
 - [ ] fix Readme;
 - [ ] publish
@@ -16,6 +15,7 @@
 - [x] migrate content
 - [x] provide own domain
 - [x] add head meta;
+- [x] fix dark/light styles/layout;
 
 ## Getting Started
 
