@@ -1,12 +1,4 @@
-const { DateTime } = require('luxon');
-
-export const formatTime = (date: string) => {
-  return DateTime.fromISO(date, {
-    zone: 'utc',
-  }).toFormat('dd LLLL yyyy');
-};
-
-export const readTime = (content: string) => {
+const readTime = (content: string) => {
   const WPS = 275 / 60;
 
   let images = 0;
@@ -35,3 +27,5 @@ export const readTime = (content: string) => {
 
   return minutes;
 };
+
+export default readTime;

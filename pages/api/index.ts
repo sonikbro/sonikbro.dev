@@ -1,7 +1,7 @@
 import fs from 'fs';
 import { join } from 'path';
 import matter from 'gray-matter';
-import { readTime } from '../../utils';
+import readTime from '../../utils/readTime';
 import { PATH, IPostsItemMeta, TListPosts } from '../../types';
 
 const postsDirectory = join(process.cwd(), PATH.POST);
