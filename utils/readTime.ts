@@ -23,9 +23,7 @@ const readTime = (content: string) => {
     images -= 1;
   }
 
-  const minutes = Math.ceil(((words - imageAdjust) / WPS + imageSecs) / 60);
-
-  return minutes;
+  return Math.ceil(((words - imageAdjust) / WPS + imageSecs) / 60);
 };
 
 export default readTime;

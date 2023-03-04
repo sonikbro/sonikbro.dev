@@ -1,7 +1,7 @@
 ---
 title: 'My Setup'
 description:
-date: '2022-06-03'
+date: '2023-03-04'
 tags:
   - life
 ---
@@ -14,7 +14,7 @@ When I started coding professionally in 2015, I did it on an Asus Windows laptop
 
 ### Devices I currently own:
 
-- Apple MacBook Air (M1, 16gb);
+- Apple MacBook Pro, 16 2021 (M1 Pro, 16gb);
 - 27" HP EliteDisplay E27u G4;
 - Apple iPhone 11;
 - Apple Watch Series SE;
@@ -57,7 +57,7 @@ When I started coding professionally in 2015, I did it on an Asus Windows laptop
 
 - **[Notion](https://www.notion.so/)** - All-in-one workspace.
 
-- **[1Password](https://1password.com/)** - Password manager.
+- **[Bitwarden](https://bitwarden.com/)** - Open-source password manager.
 
 - **[Clean my Mac](https://cleanmymac.com/)** - Delete system junk, unwanted apps and malware, and tune your Mac for maximum speed.
 
@@ -72,11 +72,7 @@ When I started coding professionally in 2015, I did it on an Asus Windows laptop
   - [Pure Focus](https://open.spotify.com/playlist/34QcxL5qjiCQQS2QxMYbOs?si=a97779c4a0404c2b)
   - [80s Love Songs](https://open.spotify.com/playlist/37i9dQZF1DXc3KygMa1OE7?si=ee952ba26d014b2f)
 
-- **[Pocket Casts](https://www.pocketcasts.com)** - All the features you need in a podcasting app without any of the bloat. Pick up exactly where you left off in your favorite podcast. Find brand new ones to fall in love with.
-
 - **[Must](https://mustapp.com)** - Social network for movie hunters
-
-- **[Reeder3](https://reederapp.com/beta3/)** - Keep control of your news reading with Reeder, RSS reader and read later client in one app, now with support for iCloud syncing.
 
 - **[qBittorrent](https://www.qbittorrent.org)** - BitTorrent client
 

@@ -13,7 +13,7 @@ export type TPostMeta = {
   date: string;
   timeToRead?: number;
   description?: string;
-  tags?: string[] | null;
+  tags?: string[];
 };
 
 export interface IPostsItemMeta extends TPostMeta {
