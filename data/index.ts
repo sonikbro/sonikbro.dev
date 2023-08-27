@@ -42,3 +42,5 @@ export const listSocial: TListItem[] = [
     label: 'Twitter',
   },
 ];
+
+export const YEAR_START_DEVELOPMENT = 2019;
