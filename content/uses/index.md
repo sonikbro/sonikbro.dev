@@ -1,7 +1,7 @@
 ---
 title: 'My Setup'
 description:
-date: '2023-03-04'
+date: '2023-08-27'
 tags:
   - life
 ---
@@ -26,44 +26,46 @@ When I started coding professionally in 2015, I did it on an Asus Windows laptop
 
 ### Audio
 
-- Marshall Headphones Major III;
+- Anker SoundCore Life Tune;
 - Apple AirPods Pro;
 
 ## Applications
 
 ### Code
 
-- **[VS Code](https://code.visualstudio.com)** - Code editor.
+- **[VS Code](https://code.visualstudio.com)** - Code editor;
 
-- **[iTerm2](https://iterm2.com)** - Best terminal emulator for macOS.
+- **[iTerm2](https://iterm2.com)** - Best terminal for macOS;
 
-- **[Sublime Merge](https://www.sublimemerge.com)** - Git Client
+- **[Sublime Merge](https://www.sublimemerge.com)** - Git Client;
 
-- **[Paw](https://paw.cloud/)** - The most advanced API tool for Mac.
+- **[Paw](https://paw.cloud/)** - The most advanced API tool for Mac;
 
-- **[Dash](https://kapeli.com/dash)** - Dash is an API Documentation Browser and Code Snippet Manager.
+- **[Dash](https://kapeli.com/dash)** - Dash is an API Documentation Browser and Code Snippet Manager;
 
 ### Routine
 
-- **[Firefox](https://www.mozilla.org/en-US/firefox/new/)** - Main browser
+- **[Setapp](https://setapp.com/uk)** - Many apps included in one subscription;
 
-- **[Telegram](https://telegram.org)** - Main messenger
+- **[Firefox](https://www.mozilla.org/en-US/firefox/new/)** - Main browser;
 
-- **[Spark](https://sparkmailapp.com)** - Best email client
+- **[Telegram](https://telegram.org)** - Main messenger;
 
-- **[Things 3](https://culturedcode.com/things/)** - For me, the best to-do app out there. Beautiful visual and interaction design. Super simple to use. When a random thought comes to my head during the day, I usually record that thought in Things. On a regular basis, I go through all open tasks and prioritize and schedule them.
+- **[Spark](https://sparkmailapp.com)** - Best email client;
 
-- **[Raycast](https://www.raycast.com/)** - Raycast is a blazingly fast, totally extendable launcher. It lets you complete tasks, calculate, share common links, and much more.
+- **[Things 3](https://culturedcode.com/things/)** - For me, the best to-do app out there. Beautiful visual and interaction design. Super simple to use. When a random thought comes to my head during the day, I usually record that thought in Things. On a regular basis, I go through all open tasks and prioritize and schedule them;
 
-- **[Notion](https://www.notion.so/)** - All-in-one workspace.
+- **[Raycast](https://www.raycast.com/)** - Raycast is a blazingly fast, totally extendable launcher. It lets you complete tasks, calculate, share common links, and much more;
 
-- **[Bitwarden](https://bitwarden.com/)** - Open-source password manager.
+- **[Notion](https://www.notion.so/)** - All-in-one workspace;
 
-- **[Clean my Mac](https://cleanmymac.com/)** - Delete system junk, unwanted apps and malware, and tune your Mac for maximum speed.
+- **[Bitwarden](https://bitwarden.com/)** - Open-source password manager;
 
-- **[Yoink](https://www.yoink.app/)** - Simplify and improve drag and drop on your Mac and speed up your daily workflow.
+- **[Clean my Mac](https://cleanmymac.com/)** - Delete system junk, unwanted apps and malware, and tune your Mac for maximum speed;
 
-- **[Time out](https://apps.apple.com/us/app/time-out-break-reminders/id402592703?)** - Break Reminders
+- **[Yoink](https://www.yoink.app/)** - Simplify and improve drag and drop on your Mac and speed up your daily workflow;
+
+- **[Time out](https://apps.apple.com/us/app/time-out-break-reminders/id402592703?)** - Break Reminders;
 
 - **[Spotify](http://spotify.com/)** - It helps me concentrate and focus on my work. Here are some of my all-time favorite albums and playlists:
 
@@ -72,23 +74,23 @@ When I started coding professionally in 2015, I did it on an Asus Windows laptop
   - [Pure Focus](https://open.spotify.com/playlist/34QcxL5qjiCQQS2QxMYbOs?si=a97779c4a0404c2b)
   - [80s Love Songs](https://open.spotify.com/playlist/37i9dQZF1DXc3KygMa1OE7?si=ee952ba26d014b2f)
 
-- **[Must](https://mustapp.com)** - Social network for movie hunters
+- **[Must](https://mustapp.com)** - Social network for movie hunters;
 
-- **[qBittorrent](https://www.qbittorrent.org)** - BitTorrent client
+- **[qBittorrent](https://www.qbittorrent.org)** - BitTorrent client;
 
-- **[LICEcap](https://www.cockos.com/licecap/)** - Simple animated screen captures.
+- **[LICEcap](https://www.cockos.com/licecap/)** - Simple animated screen captures;
 
 ### Command Line Apps
 
-- **[ngrok](https://ngrok.com/)** - One command for an instant, secure URL to your localhost server through any NAT or firewall
+- **[ngrok](https://ngrok.com/)** - One command for an instant, secure URL to your localhost server through any NAT or firewall;
 
-- **[FFmpeg](https://www.ffmpeg.org/)** - A complete, cross-platform solution to record, convert and stream audio and video.
+- **[FFmpeg](https://www.ffmpeg.org/)** - A complete, cross-platform solution to record, convert and stream audio and video;
 
 ### Design
 
-- **[Figma](https://www.figma.com/)** - Design tool
+- **[Figma](https://www.figma.com/)** - Design tool;
 
-- **[Pixelmator Pro](https://www.pixelmator.com/pro/)** - Image editor
+- **[Pixelmator Pro](https://www.pixelmator.com/pro/)** - Image editor;
 
 ## Launchpad
 
