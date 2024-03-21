@@ -6,7 +6,7 @@ export const siteData: TSiteData = {
   author: 'Anatolii Melnyk',
   description: 'Hi! I’m Anatolii Melnyk, a software developer from Ukraine',
   currentYear: new Date().getFullYear(),
-  email: 'toliamel@gmail.com',
+  email: 'soniikbro@gmail.com',
 };
 
 export const listEmail: TListItem[] = [
@@ -18,7 +18,7 @@ export const listEmail: TListItem[] = [
 
 export const listSocial: TListItem[] = [
   {
-    link: 'https://www.linkedin.com/in/anatolii-melnyk-7a0440104/',
+    link: 'www.linkedin.com/in/sonikbro',
     label: 'Linkedin',
   },
   {
@@ -40,6 +40,10 @@ export const listSocial: TListItem[] = [
   {
     link: 'https://twitter.com/sonikbro',
     label: 'Twitter',
+  },
+  {
+    link: 'https://bsky.app/profile/sonikbro.bsky.social',
+    label: 'Bluesky',
   },
 ];
 

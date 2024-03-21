@@ -1,7 +1,7 @@
 ---
 title: 'My Setup'
 description:
-date: '2023-08-27'
+date: '2024-03-21'
 tags:
   - life
 ---
@@ -16,12 +16,12 @@ When I started coding professionally in 2015, I did it on an Asus Windows laptop
 
 - Apple MacBook Pro, 16 2021 (M1 Pro, 16gb);
 - 27" HP EliteDisplay E27u G4;
-- Apple iPhone 11;
+- Apple iPhone 14 Pro;
 - Apple Watch Series SE;
 
 ### Keyboard and Mouse
 
-- Keychron K2 (Red Switch);
+- Cidoo V65 Pro;
 - Logitech MX Master 3;
 
 ### Audio
