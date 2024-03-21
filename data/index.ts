@@ -18,7 +18,7 @@ export const listEmail: TListItem[] = [
 
 export const listSocial: TListItem[] = [
   {
-    link: 'www.linkedin.com/in/sonikbro',
+    link: 'https://www.linkedin.com/in/sonikbro/',
     label: 'Linkedin',
   },
   {
