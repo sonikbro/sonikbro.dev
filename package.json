@@ -9,21 +9,22 @@
   },
   "dependencies": {
     "gray-matter": "4.0.3",
-    "luxon": "^2.4.0",
-    "next": "latest",
-    "next-themes": "^0.2.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-markdown": "^8.0.3",
-    "typescript": "^4.2.4"
+    "luxon": "3.5.0",
+    "next": "14.2.7",
+    "next-themes": "0.3.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-markdown": "9.0.1",
+    "typescript": "5.5.4"
   },
   "devDependencies": {
-    "@types/node": "^15.6.0",
-    "@types/react": "^17.0.6",
-    "@types/react-dom": "^17.0.5",
+    "@types/luxon": "3.4.2",
+    "@types/node": "22.5.2",
+    "@types/react": "18.3.5",
+    "@types/react-dom": "18.3.0",
     "autoprefixer": "10.4.0",
-    "eslint": "8.17.0",
-    "eslint-config-next": "12.1.6",
+    "eslint": "8.57.0",
+    "eslint-config-next": "14.2.7",
     "postcss": "8.4.5",
     "tailwindcss": "3.0.5"
   }

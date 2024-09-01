@@ -23,7 +23,6 @@ export interface IPostsItemMeta extends TPostMeta {
 export type TSiteData = {
   name: string;
   domain: string;
-  author: string;
   description: string;
   currentYear: number;
   email: string;

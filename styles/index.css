@@ -13,9 +13,8 @@
     outline: 0;
   }
 
-  .spacing {
-    margin-bottom: calc(1em + 4vw);
-    margin-top: calc(1em + 4vw);
+  .bottom-divider  {
+    border-bottom: 1px solid theme('colors.muteColor');
   }
 
   .postMetaWraper > :not(:last-child)::after {
@@ -45,6 +44,21 @@
     animation-duration: 2.5s;
     animation-iteration-count: infinite;
     transform-origin: 70% 70%;
+  }
+
+  .postImage {
+    width: auto;
+  }
+
+  @media (max-width: theme('container.screens.lg')) {
+    .postImage {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .header {
+    background-color: theme('colors.bgColor');
   }
 
   @keyframes waveAnimation {

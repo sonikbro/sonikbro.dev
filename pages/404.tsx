@@ -19,7 +19,7 @@ const ErrorPage: NextPage = () => {
         </p>
         <p>
           <Link href={`/`}>
-            <a>Back to homepage</a>
+            Back to homepage
           </Link>
         </p>
       </section>

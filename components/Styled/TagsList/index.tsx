@@ -14,10 +14,11 @@ const TagsList: React.FC<ITagsList> = ({ items }) => {
     <ul className="max-w-full inline-block pl-0 my-0">
       {items.map((tag: string) => (
         <li className="inline-block my-0 mr-[0.5em]" key={tag}>
-          <Link href={`/tags/${tag}`}>
-            <a className="button-primary no-underline rounded-2xl text-bgColor bg-primaryColor px-[0.5em]">
-              # {tag}
-            </a>
+          <Link 
+            href={`/tags/${tag}`}
+            className="button-primary no-underline rounded-2xl text-bgColor bg-primaryColor px-[0.5em]"
+          >
+            # {tag}
           </Link>
         </li>
       ))}

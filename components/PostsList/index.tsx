@@ -17,11 +17,11 @@ const PostsList: React.FC<IPostsList> = ({ year, posts }) => {
       <ul>
         {posts.map((post) => (
           <li key={post.slug}>
-            <Link href={`/posts/${post.slug}`}>
-              <h3 className="cursor-pointer">
-                <a>{post.title}</a>
-              </h3>
-            </Link>
+            <h3 className="cursor-pointer">
+              <Link href={`/posts/${post.slug}`}>
+                {post.title}
+              </Link>
+            </h3>
             <PostMetaWraper>
               <DateTime date={post.date} />
               <TagsList items={post.tags} />
