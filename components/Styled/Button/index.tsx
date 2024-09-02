@@ -1,9 +1,8 @@
 import React from 'react';
 
-export interface IStyledButton {
-  children: React.ReactNode;
+export type IStyledButton = React.PropsWithChildren<{
   onClick: (event: React.SyntheticEvent<HTMLButtonElement, Event>) => void;
-}
+}>
 
 const Button: React.FC<IStyledButton> = ({ children, onClick }) => {
   return (

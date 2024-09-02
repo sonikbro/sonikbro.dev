@@ -1,8 +1,4 @@
-type Props = {
-  children: React.ReactNode;
-};
-
-const PostMetaWraper: React.FC<Props> = ({ children }) => {
+const PostMetaWraper: React.FC<React.PropsWithChildren> = ({ children }) => {
   return (
     <div className="flex items-center mt-1.5 postMetaWraper">{children}</div>
   );

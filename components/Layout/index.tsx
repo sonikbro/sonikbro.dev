@@ -1,14 +1,10 @@
 import React from 'react';
+
 import Meta from '../Meta';
 import Container from '../Styled/Container';
 import Header from '../Header';
-import Divider from '../Styled/Divider';
 
-interface IBasicLayout {
-  children: React.ReactNode;
-}
-
-const BasicLayout: React.FC<IBasicLayout> = ({ children }) => {
+const BasicLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
   return (
     <>
       <Meta />
