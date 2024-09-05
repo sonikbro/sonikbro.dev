@@ -31,7 +31,10 @@ const Contact: NextPage = () => {
       <p>With any questions or requests or just greetings, write here:</p>
       <LinksList items={listEmail} />
       <p>
-        <Button onClick={handleClick}>
+        <Button 
+          onClick={handleClick}
+          ariaLabel={'Copy email'}
+        >
           {text}
         </Button>
       </p>

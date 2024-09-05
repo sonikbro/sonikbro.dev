@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Meta from '../Meta';
 import Container from '../Styled/Container';
 import Header from '../Header';

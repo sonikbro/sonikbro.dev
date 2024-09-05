@@ -1,4 +1,3 @@
-import React from 'react';
 import Markdown from '../Markdown';
 import { TPostMeta } from '../../types';
 import DateTime from '../Styled/DateTime';
