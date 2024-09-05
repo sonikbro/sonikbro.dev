@@ -1,36 +1,39 @@
-import { SyntheticEvent, useState } from 'react';
+import { SyntheticEvent, useCallback, useState } from 'react';
 import type { NextPage } from 'next';
-import NextHead from 'next/head';
 import Button from '../components/Styled/Button';
 import LinksList from '../components/Styled/LinksList';
 import { listEmail, listSocial, siteData } from '../data';
+import TitleHead from '../components/TitleHead/TitleHead';
 
 const Contact: NextPage = () => {
   const [text, setText] = useState<string>('Copy email');
 
-  const handleClick = (
-    event: SyntheticEvent<HTMLButtonElement, Event>
-  ): void => {
-    event.preventDefault();
+  const handleClick = useCallback(
+    (event: SyntheticEvent<HTMLButtonElement, Event>): void => {
+      event.preventDefault();
 
-    navigator?.clipboard.writeText(siteData.email);
-    setText('Email copied');
+      navigator?.clipboard.writeText(siteData.email);
+      setText('Email copied');
 
-    setTimeout(() => {
-      setText('Copy email');
-    }, 2000);
-  };
+      setTimeout(
+        () => setText('Copy email'), 
+        2000
+      );
+    }, 
+    []
+  );
 
   return (
     <>
-      <NextHead>
-        <title>{siteData.name} · contact</title>
-      </NextHead>
+      <TitleHead title="contact" />
+
       <h1>Get in touch</h1>
       <p>With any questions or requests or just greetings, write here:</p>
       <LinksList items={listEmail} />
       <p>
-        <Button onClick={(event) => handleClick(event)}>{text}</Button>
+        <Button onClick={handleClick}>
+          {text}
+        </Button>
       </p>
       <h2>My social networks</h2>
       <p>

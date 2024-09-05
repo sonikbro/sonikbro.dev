@@ -1,8 +1,7 @@
 import { NextPage } from 'next';
-import NextHead from 'next/head';
 import { TPostMeta } from '../../types';
 import Post from '../../components/Post';
-import { siteData } from '../../data';
+import TitleHead from '../../components/TitleHead/TitleHead';
 import { getPostBySlug, getPostSlugs } from '../api';
 
 interface IPostProps {
@@ -13,11 +12,7 @@ interface IPostProps {
 const SinglePost: NextPage<IPostProps> = ({ data, content }) => {
   return (
     <>
-      <NextHead>
-        <title>
-          {data.title} · {siteData.name}
-        </title>
-      </NextHead>
+      <TitleHead title={data.title} />
 
       <Post frontmatter={data} markdown={content} type="post" />
     </>

@@ -1,9 +1,8 @@
 import type { NextPage } from 'next';
-import NextHead from 'next/head';
 import PostsList from '../components/PostsList';
 import { TListPosts } from '../types';
-import { siteData } from '../data';
 import { getAllSortedPosts } from './api';
+import TitleHead from '../components/TitleHead/TitleHead';
 
 interface IPostsPageProps {
   posts: TListPosts[];
@@ -12,9 +11,7 @@ interface IPostsPageProps {
 const Posts: NextPage<IPostsPageProps> = ({ posts }) => {
   return (
     <>
-      <NextHead>
-        <title>{siteData.name} · posts</title>
-      </NextHead>
+      <TitleHead title="posts" />
 
       <h1>All posts</h1>
 

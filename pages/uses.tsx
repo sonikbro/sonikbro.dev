@@ -1,9 +1,8 @@
 import type { NextPage } from 'next';
-import NextHead from 'next/head';
 import Post from '../components/Post';
 import { TPostMeta, PATH } from '../types';
-import { siteData } from '../data';
 import { getContentByFile } from './api';
+import TitleHead from '../components/TitleHead/TitleHead';
 
 interface Props {
   data: TPostMeta;
@@ -13,9 +12,7 @@ interface Props {
 const Uses: NextPage<Props> = ({ data, content }) => {
   return (
     <>
-      <NextHead>
-        <title>{siteData.name} · uses</title>
-      </NextHead>
+      <TitleHead title="uses" />
       <Post frontmatter={data} markdown={content} type="page" />
     </>
   );

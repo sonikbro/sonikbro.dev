@@ -1,13 +1,12 @@
 import type { NextPage } from 'next';
 import Link from 'next/link';
-import NextHead from 'next/head';
+import TitleHead from '../components/TitleHead/TitleHead';
 
 const ErrorPage: NextPage = () => {
   return (
     <>
-      <NextHead>
-        <title>Page Not Be Found</title>
-      </NextHead>
+      <TitleHead title="Page Not Be Found" />
+      
       <section className="flex flex-col text-center items-center">
         <h1>
           4 <span>😢</span> 4
