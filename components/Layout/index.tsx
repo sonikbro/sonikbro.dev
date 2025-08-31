@@ -1,8 +1,9 @@
+import { FC, PropsWithChildren } from 'react';
 import Meta from '../Meta';
 import Container from '../Styled/Container';
 import Header from '../Header';
 
-const BasicLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
+const BasicLayout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <>
       <Meta />

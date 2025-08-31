@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import Link from 'next/link';
 import { IPostsItemMeta } from '../../types';
 import PostMetaWraper from '../Styled/PostMetaWraper';
@@ -9,7 +10,7 @@ interface IPostsList {
   year: string;
 }
 
-const PostsList: React.FC<IPostsList> = ({ year, posts }) => {
+const PostsList: FC<IPostsList> = ({ year, posts }) => {
   return (
     <>
       <h3>{year}</h3>

@@ -1,3 +1,5 @@
+import { FC } from 'react';
+
 import Markdown from '../Markdown';
 import { TPostMeta } from '../../types';
 import DateTime from '../Styled/DateTime';
@@ -11,7 +13,7 @@ interface IPost {
   type: 'post' | 'page';
 }
 
-const Post: React.FC<IPost> = ({ markdown, frontmatter, type }) => {
+const Post: FC<IPost> = ({ markdown, frontmatter, type }) => {
   if (type === 'page') {
     return (
       <div>
