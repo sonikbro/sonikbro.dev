@@ -1,10 +1,11 @@
+import { FC } from 'react';
 import { TListItem } from '../../../types';
 
 interface IStyledButton {
   items: TListItem[];
 }
 
-const LinksList: React.FC<IStyledButton> = ({ items }) => {
+const LinksList: FC<IStyledButton> = ({ items }) => {
   if (items.length === 0) {
     return null;
   }
