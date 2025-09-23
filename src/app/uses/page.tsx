@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import ReactMarkdown from 'react-markdown';
-import { getUsesContent } from "@ui/api/uses";
+import { getUsesContent } from "@api/uses";
 
 export async function generateMetadata(): Promise<Metadata> {
   const { metadata } = getUsesContent();
@@ -15,21 +15,21 @@ export default function Uses() {
   const { metadata, content } = getUsesContent();
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
-      <article className="prose prose-lg max-w-none">
-        <header className="mb-12 text-center border-b border-gray-200 pb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+    <div>
+      <article>
+        <header>
+          <h1>
             {metadata.title}
           </h1>
 
           {metadata.description && (
-            <p className="text-xl text-gray-600 mb-6 italic">
+            <p>
               {metadata.description}
             </p>
           )}
 
           {metadata.date && (
-            <time className="text-sm text-gray-500 block">
+            <time>
               Last updated: {new Date(metadata.date).toLocaleDateString('en-US', {
                 year: 'numeric',
                 month: 'long',
@@ -39,7 +39,7 @@ export default function Uses() {
           )}
         </header>
 
-        <div className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-a:text-blue-600 prose-strong:text-gray-900 prose-ul:text-gray-700 prose-ol:text-gray-700">
+        <div className="uses-content">
           <ReactMarkdown>{content}</ReactMarkdown>
         </div>
       </article>

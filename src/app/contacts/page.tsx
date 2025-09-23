@@ -1,52 +1,74 @@
-// import { SyntheticEvent, useCallback, useState } from 'react';
 import type { Metadata } from "next";
-// import Button from '../components/Styled/Button';
-// import LinksList from '../components/Styled/LinksList';
-// import { listEmail, listSocial, siteData } from '../data';
-// import TitleHead from '../components/TitleHead/TitleHead';
+import ReactMarkdown from 'react-markdown';
+import { getContactsContent } from "@api/contacts";
 
-export const metadata: Metadata = {
-  title: "Contacts",
-  description: "Get in touch with me",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const { metadata } = getContactsContent();
 
-export default function Contact() {
-  // const [text, setText] = useState<string>('Copy email');
+  return {
+    title: metadata.title,
+    description: metadata.description,
+  };
+}
 
-  // const handleClick = useCallback(
-  //   (event: SyntheticEvent<HTMLButtonElement, Event>): void => {
-  //     event.preventDefault();
-
-  //   //   navigator?.clipboard.writeText(siteData.email);
-  //     setText('Email copied');
-
-  //     setTimeout(
-  //       () => setText('Copy email'),
-  //       2000
-  //     );
-  //   },
-  //   []
-  // );
+export default function Contacts() {
+  const { metadata, content } = getContactsContent();
 
   return (
-    <>
-      <h1>Get in touch</h1>
-      <p>With any questions or requests or just greetings, write here:</p>
-      {/* <LinksList items={listEmail} /> */}
-      <p>
-        {/* <Button
-          onClick={handleClick}
-          ariaLabel={'Copy email'}
-        >
-          {text}
-        </Button> */}
-      </p>
-      <h2>My social networks</h2>
-      <p>
-        The following is a list of social networks. Browse them to find more
-        information about me.
-      </p>
-      {/* <LinksList items={listSocial} /> */}
-    </>
+    <div>
+      <article>
+        <header>
+          <h1>
+            {metadata.title}
+          </h1>
+
+          {metadata.description && (
+            <p>
+              {metadata.description}
+            </p>
+          )}
+
+          {metadata.date && (
+            <time>
+              Last updated: {new Date(metadata.date).toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+              })}
+            </time>
+          )}
+        </header>
+
+        <div>
+          <ReactMarkdown>{content}</ReactMarkdown>
+        </div>
+      </article>
+    </div>
   );
-};
+}
+
+
+// const [text, setText] = useState<string>('Copy email');
+
+// const handleClick = useCallback(
+//   (event: SyntheticEvent<HTMLButtonElement, Event>): void => {
+//     event.preventDefault();
+
+//   //   navigator?.clipboard.writeText(siteData.email);
+//     setText('Email copied');
+
+//     setTimeout(
+//       () => setText('Copy email'),
+//       2000
+//     );
+//   },
+//   []
+// );
+
+
+// <Button
+//   onClick={handleClick}
+//   ariaLabel={'Copy email'}
+// >
+//   {text}
+// </Button>

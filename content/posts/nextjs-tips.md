@@ -2,11 +2,6 @@
 title: 5 Essential Next.js Tips for Better Performance
 description: Practical tips to optimize your Next.js applications for better performance and user experience
 date: '2024-02-10'
-tags:
-  - nextjs
-  - performance
-  - optimization
-  - react
 ---
 
 Next.js is an amazing framework that provides many optimizations out of the box, but there are still several techniques you can use to squeeze even more performance out of your applications.

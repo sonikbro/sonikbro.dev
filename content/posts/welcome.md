@@ -2,10 +2,6 @@
 title: Welcome to My Blog
 description: Introduction to this new blog and what you can expect to find here
 date: '2024-01-15'
-tags:
-  - blog
-  - introduction
-  - welcome
 ---
 
 Welcome to my personal blog! I'm excited to share my thoughts, experiences, and knowledge with you through this platform.

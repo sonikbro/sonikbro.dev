@@ -2,8 +2,6 @@
 title: Hello, World!
 description: Let's get acquainted
 date: '2022-07-15'
-tags:
-  - life
 ---
 
 Hi! I’m Anatolii Melnyk, a software developer from Ukraine.

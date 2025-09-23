@@ -10,7 +10,7 @@ export default function GlobalNotFound() {
   return (
     <html lang="en">
       <body>
-        <section className="flex flex-col text-center items-center">
+        <section>
           <h1>4 <span>😢</span> 4</h1>
           <h2>Oops! Page Not Be Found</h2>
           <p>
