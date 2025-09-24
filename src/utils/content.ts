@@ -1,7 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { ContentConfig, ContentItem, ContentType } from '@types/content';
+import { ContentConfig, ContentItem, ContentType } from '@type/content';
+import readTime from '@utils/readTime';
 
 const CONTENT_BASE_DIR = path.join(process.cwd(), 'content');
 
@@ -9,10 +10,6 @@ export const CONTENT_CONFIGS: Record<ContentType, ContentConfig> = {
   [ContentType.POST]: {
     directory: 'posts',
     type: ContentType.POST,
-  },
-  [ContentType.PAGE]: {
-    directory: 'page',
-    type: ContentType.PAGE,
   },
   [ContentType.USES]: {
     directory: 'uses',
@@ -52,6 +49,7 @@ export function parseMarkdownFile(filePath: string, slug?: string): ContentItem 
   const metadata = {
     title: data.title || '',
     slug: slug || 'index',
+    timeRead: readTime(content),
     ...(data.description && { description: data.description }),
     ...(data.date && { date: data.date }),
   };

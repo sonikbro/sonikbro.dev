@@ -1,4 +1,4 @@
-import { ContentType } from "@types/content";
+import { ContentType } from "@type/content";
 import { getContentSlugs, getContentBySlug, getAllContent } from "@utils/content";
 
 export function getPostSlugs() {

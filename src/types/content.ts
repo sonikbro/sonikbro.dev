@@ -5,7 +5,6 @@ export interface ContentConfig {
 
 export const enum ContentType {
   POST = 'posts',
-  PAGE = 'page',
   USES = 'uses',
   CONTACTS = 'contacts'
 }
@@ -13,6 +12,7 @@ export const enum ContentType {
 export interface ContentMetadata {
   title: string;
   slug: string;
+  timeRead: number;
   description?: string;
   date?: string;
 }

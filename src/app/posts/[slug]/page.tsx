@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import ReactMarkdown from 'react-markdown';
 import { getPostBySlug } from '@api/posts';
+import ContentEntity from '@components/ContentEntity/ContentEntity';
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   try {
@@ -25,7 +25,7 @@ interface SinglePostProps {
 
 export default function SinglePost({ params }: SinglePostProps) {
   try {
-    const { metadata, content } = getPostBySlug(params.slug);
+    const post = getPostBySlug(params.slug);
 
     return (
       <div>
@@ -35,33 +35,11 @@ export default function SinglePost({ params }: SinglePostProps) {
           </Link>
         </nav>
 
-        <article>
-          <header>
-            <h1>
-              {metadata.title}
-            </h1>
-
-            {metadata.description && (
-              <p>
-                {metadata.description}
-              </p>
-            )}
-
-            <time>
-              {metadata.date && (
-                new Date(metadata.date).toLocaleDateString('en-US', {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric'
-                })
-              )}
-            </time>
-          </header>
-
-          <div>
-            <ReactMarkdown>{content}</ReactMarkdown>
-          </div>
-        </article>
+        <ContentEntity
+           metadata={post.metadata}
+           content={post.content}
+           type="post"
+         />
       </div>
     );
   } catch {

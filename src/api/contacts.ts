@@ -1,4 +1,4 @@
-import { ContentType } from "@types/content";
+import { ContentType } from "@type/content";
 import { getContentBySlug } from "@utils/content";
 
 export function getContactsContent() {
