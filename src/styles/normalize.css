@@ -1,0 +1,71 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+html {
+    background: var(--background);
+    color: var(--baseTextColor);
+    font-family: var(--baseFontFamily);
+    font-size: calc(0.5vw + 1rem);
+    line-height: var(--baseLineHeight);
+    font-optical-sizing: auto;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    tab-size: 4;
+}
+
+body {
+    margin: 0;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 1 */
+    line-height: 1.15; /* 1 */
+    margin: 0; /* 2 */
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+legend {
+    padding: 0;
+}
+
+progress {
+    vertical-align: baseline;
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+    height: auto;
+}
+
+[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    outline-offset: -2px; /* 2 */
+}
+
+::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button; /* 1 */
+    font: inherit; /* 2 */
+}
+
+summary {
+    display: list-item;
+}

@@ -1,0 +1,11 @@
+.header {
+    display: flex;
+    padding: var(--baseSpacingVertical) var(--baseSpacingHorizontal);
+}
+
+.header ul {
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
