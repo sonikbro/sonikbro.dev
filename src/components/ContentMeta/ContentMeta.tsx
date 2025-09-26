@@ -11,18 +11,16 @@ const ContentMeta: FC<IProps> = ({ metadata, isShowContentParams, titleTag = 'h1
   const { title, description, date, timeRead } = metadata;
 
   return (
-    <header>
+    <>
       {createElement(titleTag, {}, title)}
 
       {description && (
-        <p>
-          {description}
-        </p>
+        <p>{description}</p>
       )}
 
       {
         isShowContentParams && (
-          <div>
+          <aside>
             {timeRead && (
               <span>
                 {timeRead} min read
@@ -30,7 +28,7 @@ const ContentMeta: FC<IProps> = ({ metadata, isShowContentParams, titleTag = 'h1
             )}
             <span> · </span>
             {date && (
-              <time>
+              <time dateTime={date}>
                 {new Date(date).toLocaleDateString('en-US', {
                   year: 'numeric',
                   month: 'long',
@@ -38,10 +36,10 @@ const ContentMeta: FC<IProps> = ({ metadata, isShowContentParams, titleTag = 'h1
                 })}
               </time>
             )}
-          </div>
+          </aside>
         )
       }
-    </header>
+    </>
   );
 };
 

@@ -3,7 +3,6 @@
 import { usePathname } from 'next/navigation';
 import { FC, memo } from 'react';
 import Link from "next/link";
-import "./Header.css";
 
 const paths = [
   {
@@ -28,7 +27,7 @@ const Header: FC = () => {
   const pathname = usePathname();
 
   return (
-    <header className='header'>
+    <header>
       <nav>
         <ul>
           {paths.map(path => {
@@ -37,8 +36,8 @@ const Header: FC = () => {
               : pathname.startsWith(path.link);
 
             return (
-              <li key={path.link} className={isActive ? 'active' : ''}>
-                <Link href={path.link}>
+              <li key={path.link}>
+                <Link href={path.link} aria-current={isActive}>
                   {path.label}
                 </Link>
               </li>
@@ -46,6 +45,7 @@ const Header: FC = () => {
           })}
         </ul>
       </nav>
+      <hr/>
     </header>
   );
 };

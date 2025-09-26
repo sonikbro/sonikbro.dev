@@ -21,15 +21,15 @@ const ContentList: FC<IProps> = ({ items, path }) => {
     }
 
     return (
-      <div>
-        {items.map((item) => (
+      items.map((item) => (
+        <article key={item.metadata.slug}>
           <ContentLink
-            key={item.metadata.slug}
             metadata={item.metadata}
             baseUrl={path}
+            key={item.metadata.slug}
           />
-        ))}
-      </div>
+        </article>
+      ))
     )
   }
 

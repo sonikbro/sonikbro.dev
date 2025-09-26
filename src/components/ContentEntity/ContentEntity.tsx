@@ -1,7 +1,7 @@
 import { FC, memo } from 'react';
-import ReactMarkdown from 'react-markdown';
 import { ContentMetadata } from '@type/content'
 import ContentMeta from '@components/ContentMeta/ContentMeta';
+import MarkdownView from '@components/MarkdownView/MarkdownView';
 
 interface IProps {
   metadata: ContentMetadata;
@@ -18,7 +18,7 @@ const ContentEntity: FC<IProps> = ({ metadata, content, type }) => {
       />
 
       <article>
-        <ReactMarkdown>{content}</ReactMarkdown>
+        <MarkdownView content={content}/>
       </article>
     </section>
   );

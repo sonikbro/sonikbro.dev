@@ -1,3 +1,5 @@
+import "../styles/globals.scss";
+
 import type { Metadata } from "next";
 import Link from 'next/link';
 

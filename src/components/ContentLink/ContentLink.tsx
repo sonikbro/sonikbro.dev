@@ -10,15 +10,13 @@ interface IProps {
 
 const ContentLink: FC<IProps> = ({ metadata, baseUrl }) => {
   return (
-    <article>
-      <Link href={`${baseUrl}/${metadata.slug}`}>
-        <ContentMeta
-          metadata={metadata}
-          isShowContentParams={true}
-          titleTag={'h2'}
-        />
-      </Link>
-    </article>
+    <Link href={`${baseUrl}/${metadata.slug}`}>
+      <ContentMeta
+        metadata={metadata}
+        isShowContentParams={true}
+        titleTag={'h3'}
+      />
+    </Link>
   );
 };
 

@@ -1,0 +1,53 @@
+@use "@picocss/pico/scss/pico" with (
+    $theme-color: "pumpkin",
+    $enable-semantic-container: true,
+    $enable-classes: false,
+    $css-var-prefix: "--dev-",
+    $modules: (
+        // Theme
+        "themes/default": true,
+
+        // Layout
+        "layout/document": true,
+        "layout/landmarks": true,
+        "layout/container": true,
+        "layout/section": true,
+        "layout/grid": false,
+        "layout/overflow-auto": false,
+
+        // Content
+        "content/link": true,
+        // TODO
+        "content/typography": true,
+        "content/embedded": true,
+        "content/button": true,
+        "content/table": false,
+        "content/code": true,
+        "content/figure": true,
+        "content/misc": true,
+
+        // Forms
+        "forms/basics": false,
+        "forms/checkbox-radio-switch": false,
+        "forms/input-color": false,
+        "forms/input-date": false,
+        "forms/input-file": false,
+        "forms/input-range": false,
+        "forms/input-search": false,
+
+        // Components
+        "components/accordion": false,
+        "components/card": true,
+        "components/dropdown": false,
+        "components/group": true,
+        "components/loading": false,
+        "components/modal": false,
+        "components/nav": true,
+        "components/progress": false,
+        "components/tooltip": false,
+
+        // Utilities
+        "utilities/accessibility": true,
+        "utilities/reduce-motion": true,
+    )
+);

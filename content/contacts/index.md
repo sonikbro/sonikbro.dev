@@ -7,11 +7,7 @@ date: '2024-03-21'
 With any questions or requests or just greetings, write here:
 - [soniikbro@gmail.com](mailto:soniikbro@gmail.com)
 
-BUTTON
-
-### My social networks
 The following is a list of social networks. Browse them to find more information about me.
-
 - [Linkedin](https://www.linkedin.com/in/sonikbro/)
 - [Github](https://github.com/sonikbro)
 - [Telegram](https://t.me/sonikbro)
