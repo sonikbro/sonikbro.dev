@@ -1,0 +1,43 @@
+.heroCard {
+    margin-bottom: calc(var(--dev-typography-spacing-vertical) * 2);
+
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+}
+
+.heroDescription {
+    max-width: 85%;
+}
+
+.waveAnimation {
+    position: relative;
+    display: inline-block;
+    animation-name: waveAnimation;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+}
+
+@keyframes waveAnimation {
+    0%,
+    60%,
+    100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    10%,
+    30% {
+        transform: rotate(14deg);
+    }
+    20% {
+        transform: rotate(-8deg);
+    }
+    40% {
+        transform: rotate(-4deg);
+    }
+}

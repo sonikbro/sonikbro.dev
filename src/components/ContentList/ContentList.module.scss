@@ -1,0 +1,5 @@
+.ContentList {
+    li + li {
+        margin-top: var(--dev-typography-spacing-vertical);
+    }
+}

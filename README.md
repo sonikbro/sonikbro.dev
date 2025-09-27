@@ -4,25 +4,7 @@
 
 ## Getting Started
 
-### Requirements
-
-- [Node](https://nodejs.org/)
-
-**To find your current node version:**
-
-```
-node --version
-```
-
-### Step one
-
-```
-npm install
-```
-
-### Step two
-
-Run the development server:
+First, run the development server:
 
 ```bash
 npm run dev
@@ -30,11 +12,5 @@ npm run dev
 yarn dev
 ```
 
-### Step three
-
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-#### FIXME
-
-- [ ] fix styles;
-- [ ] add blurDataURL images;
