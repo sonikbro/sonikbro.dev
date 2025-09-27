@@ -1,28 +1,45 @@
 @use "@picocss/pico/scss/pico" with (
     $theme-color: "pumpkin",
     $enable-semantic-container: true,
-    $enable-classes: false,
+    $enable-classes: true,
+    $enable-responsive-typography: false,
     $css-var-prefix: "--dev-",
+    $breakpoints: (
+        md: (
+            breakpoint: 768px,
+            viewport: 90%,
+        ),
+        lg: (
+            breakpoint: 1024px,
+            viewport: 760px,
+        ),
+        xl: (
+            breakpoint: 1280px,
+            viewport: 940,
+        ),
+        xxl: (
+            breakpoint: 1536px,
+            viewport: 1100px,
+        ),
+    ),
     $modules: (
-        // Theme
         "themes/default": true,
 
         // Layout
         "layout/document": true,
         "layout/landmarks": true,
-        "layout/container": true,
+        "layout/container": false,
         "layout/section": true,
         "layout/grid": false,
         "layout/overflow-auto": false,
 
         // Content
         "content/link": true,
-        // TODO
         "content/typography": true,
         "content/embedded": true,
         "content/button": true,
         "content/table": false,
-        "content/code": true,
+        "content/code": false,
         "content/figure": true,
         "content/misc": true,
 
@@ -48,6 +65,29 @@
 
         // Utilities
         "utilities/accessibility": true,
-        "utilities/reduce-motion": true,
+        "utilities/reduce-motion": false,
     )
 );
+
+:root,
+:host {
+    --dev-font-size: calc(0.5vw + 1rem);
+}
+
+a {
+    &.outline[aria-current="true"] {
+        --dev-color: var(--dev-color);
+        background-color: var(--dev-primary-focus);
+
+        &:not(:focus-visible) {
+            box-shadow: 0 0 0 var(--dev-outline-width) var(--dev-primary-hover-border);
+        }
+    }
+}
+
+.deskonly {
+    @media (max-width: 768px) {
+        display: none;
+        visability: hidden;
+    }
+}

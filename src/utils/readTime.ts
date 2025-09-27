@@ -1,5 +1,5 @@
 export default function readTime(content: string){
-  const WPS = 275 / 60;
+  const WPS = 110 / 60;
 
   let images = 0;
   const regex = /\w/;

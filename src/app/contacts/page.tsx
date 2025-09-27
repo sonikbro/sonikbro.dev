@@ -18,7 +18,6 @@ export default function Contacts() {
     <ContentEntity
       metadata={contacts.metadata}
       content={contacts.content}
-      type="page"
     />
   );
 }

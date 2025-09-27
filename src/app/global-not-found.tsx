@@ -12,17 +12,27 @@ export default function GlobalNotFound() {
   return (
     <html lang="en">
       <body>
-        <section>
-          <h1>4 <span>😢</span> 4</h1>
-          <h2>Oops! Page Not Be Found</h2>
-          <p>
-            Sorry, the page you are looking for does not exist, the title has
-            changed, or it is temporary unavailable.
-          </p>
-          <p>
-            <Link href={`/`}>Back to homepage</Link>
-          </p>
-        </section>
+        <header></header>
+        <main>
+          <section>
+            <article style={{textAlign: 'center'}}>
+              <header>
+                <hgroup>
+                  <h1>4 <span>😢</span> 4</h1>
+                  <h2>Oops! Page Not Be Found</h2>
+                </hgroup>
+              </header>
+              <small>
+                Sorry, the page you are looking for does not exist, the title has
+                changed, or it is temporary unavailable.
+              </small>
+              <footer>
+                <Link role={"button"} href={`/`}>Back to homepage</Link>
+              </footer>
+            </article>
+          </section>
+        </main>
+        <footer></footer>
       </body>
     </html>
   )

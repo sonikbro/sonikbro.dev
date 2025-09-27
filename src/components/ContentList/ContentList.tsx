@@ -1,13 +1,16 @@
 import { FC, memo } from 'react';
 import { ContentItem } from '@type/content'
 import ContentLink from '@components/ContentLink/ContentLink';
+import styles from './ContentList.module.scss'
 
 interface IProps {
   items: ContentItem[];
   path: string;
+  title: string;
+  description: string;
 }
 
-const ContentList: FC<IProps> = ({ items, path }) => {
+const ContentList: FC<IProps> = ({ items, path, title, description }) => {
   const getList = () => {
     if(!items.length) {
       return (
@@ -21,22 +24,30 @@ const ContentList: FC<IProps> = ({ items, path }) => {
     }
 
     return (
-      items.map((item) => (
-        <article key={item.metadata.slug}>
-          <ContentLink
-            metadata={item.metadata}
-            baseUrl={path}
-            key={item.metadata.slug}
-          />
-        </article>
-      ))
+      <aside>
+        <nav>
+          <ul className={styles.ContentList}>
+            {
+              items.map((item) => (
+                <li key={item.metadata.slug}>
+                  <ContentLink
+                    metadata={item.metadata}
+                    baseUrl={path}
+                  />
+                </li>
+              ))
+            }
+          </ul>
+        </nav>
+      </aside>
     )
   }
 
   return (
     <section>
       <header>
-        <h1>All posts</h1>
+        <h1>{title}</h1>
+        <p>{description}</p>
       </header>
 
       {getList()}

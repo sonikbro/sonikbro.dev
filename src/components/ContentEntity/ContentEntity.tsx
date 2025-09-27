@@ -6,16 +6,19 @@ import MarkdownView from '@components/MarkdownView/MarkdownView';
 interface IProps {
   metadata: ContentMetadata;
   content: string;
-  type: 'post' | 'page';
 }
 
-const ContentEntity: FC<IProps> = ({ metadata, content, type }) => {
+const ContentEntity: FC<IProps> = ({ metadata, content }) => {
+  const isPostType = metadata.type === 'post';
+
   return (
     <section>
       <ContentMeta
         metadata={metadata}
-        isShowContentParams={type === 'post'}
+        isShowContentParams={isPostType}
       />
+
+      {isPostType && <hr/>}
 
       <article>
         <MarkdownView content={content}/>

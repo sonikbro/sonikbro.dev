@@ -2,6 +2,7 @@ import { FC, memo } from 'react';
 import Link from "next/link";
 import { ContentMetadata } from '@type/content'
 import ContentMeta from '@components/ContentMeta/ContentMeta';
+import styles from './ContentLink.module.scss'
 
 interface IProps {
   metadata: ContentMetadata;
@@ -10,7 +11,7 @@ interface IProps {
 
 const ContentLink: FC<IProps> = ({ metadata, baseUrl }) => {
   return (
-    <Link href={`${baseUrl}/${metadata.slug}`}>
+    <Link href={`${baseUrl}/${metadata.slug}`} className={styles.ContentLink}>
       <ContentMeta
         metadata={metadata}
         isShowContentParams={true}

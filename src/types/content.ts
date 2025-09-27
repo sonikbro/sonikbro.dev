@@ -5,16 +5,16 @@ export interface ContentConfig {
 
 export const enum ContentType {
   POST = 'posts',
-  USES = 'uses',
   CONTACTS = 'contacts'
 }
 
 export interface ContentMetadata {
   title: string;
   slug: string;
+  type: 'post' | 'page';
   timeRead: number;
-  description?: string;
-  date?: string;
+  description: string;
+  date: string;
 }
 
 export interface ContentItem {

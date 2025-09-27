@@ -10,5 +10,5 @@ export function getPostBySlug(slug: string) {
 }
 
 export function getAllPosts() {
-  return getAllContent(ContentType.POST);
+  return getAllContent(ContentType.POST, true);
 }

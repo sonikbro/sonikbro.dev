@@ -11,6 +11,11 @@ export default function Posts() {
   const posts = getAllPosts();
 
   return (
-    <ContentList items={posts} path="posts" />
+    <ContentList
+      items={posts}
+      path="posts"
+      title={'Posts'}
+      description={"All posts"}
+    />
   );
 };

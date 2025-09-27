@@ -2,6 +2,7 @@
 title: 'My Setup'
 description: "This is a complete list of tools, programs, services, and equipment that I use regularly. The list contains tools that I work with as a software developer, as well as tools that I use at home."
 date: '2024-03-21'
+type: 'post'
 ---
 
 ## Hardware

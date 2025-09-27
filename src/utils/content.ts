@@ -11,10 +11,6 @@ export const CONTENT_CONFIGS: Record<ContentType, ContentConfig> = {
     directory: 'posts',
     type: ContentType.POST,
   },
-  [ContentType.USES]: {
-    directory: 'uses',
-    type: ContentType.USES,
-  },
   [ContentType.CONTACTS]: {
     directory: 'contacts',
     type: ContentType.CONTACTS,
@@ -49,9 +45,10 @@ export function parseMarkdownFile(filePath: string, slug?: string): ContentItem 
   const metadata = {
     title: data.title || '',
     slug: slug || 'index',
+    type: data.type,
     timeRead: readTime(content),
-    ...(data.description && { description: data.description }),
-    ...(data.date && { date: data.date }),
+    description: data.description || '',
+    date: data.date || '',
   };
 
   return {
@@ -68,16 +65,25 @@ export function getContentBySlug(contentType: ContentType, slug: string): Conten
   return parseMarkdownFile(fullPath, slug);
 }
 
-export function getAllContent(contentType: ContentType): ContentItem[] {
+export function getAllContent(contentType: ContentType, isList?: boolean): ContentItem[] {
   const slugs = getContentSlugs(contentType);
 
-  return slugs.map((slug) => {
-    try {
-      return getContentBySlug(contentType, slug);
-    } catch (error) {
-      console.error(`Error reading ${contentType} content "${slug}":`, error);
-      return null;
-    }
-  })
-  .filter((item): item is ContentItem => item !== null);
+  const items = slugs
+    .map((slug) => {
+      try {
+        return getContentBySlug(contentType, slug);
+      } catch (error) {
+        console.error(`Error reading ${contentType} content "${slug}":`, error);
+        return null;
+      }
+    })
+    .filter((item): item is ContentItem => item !== null);
+
+  if (isList) {
+    return items.sort((a, b) => {
+      return new Date(b.metadata.date).getTime() - new Date(a.metadata.date).getTime();
+    });
+  }
+
+  return items;
 }

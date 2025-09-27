@@ -2,6 +2,7 @@
 title: 'Get in touch'
 description: ""
 date: '2024-03-21'
+type: 'page'
 ---
 
 With any questions or requests or just greetings, write here:

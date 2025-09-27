@@ -22,7 +22,6 @@ export default function SinglePost({ params }: SinglePostProps) {
     <ContentEntity
        metadata={post.metadata}
        content={post.content}
-       type="post"
      />
   );
 };
