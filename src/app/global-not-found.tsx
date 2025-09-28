@@ -6,6 +6,14 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: '404 - Page Not Found',
   description: 'The page you are looking for does not exist.',
+  icons: {
+    apple: "/favicon/apple-touch-icon.png",
+    icon: [
+      { url: "/favicon/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+  },
+  manifest: "/favicon/site.webmanifest",
 }
 
 export default function GlobalNotFound() {
@@ -27,7 +35,7 @@ export default function GlobalNotFound() {
                 changed, or it is temporary unavailable.
               </small>
               <footer>
-                <Link role={"button"} href={`/`}>Back to homepage</Link>
+                <Link role={"button"} href={`/`}>← Back to homepage</Link>
               </footer>
             </article>
           </section>

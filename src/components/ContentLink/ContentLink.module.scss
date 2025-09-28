@@ -1,6 +1,7 @@
 .ContentLink {
     text-decoration: none;
     background: var(--dev-card-background-color);
+    transition: none;
 
     &:hover {
         box-shadow: 0 0 0 var(--dev-outline-width) var(--dev-primary-focus);

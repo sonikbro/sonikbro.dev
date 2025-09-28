@@ -12,7 +12,7 @@ const ToggleTheme = () => {
     []
   );
 
-  if (!mounted) return null;
+  if (!mounted) return <svg width="25" height="25"></svg>;
 
   const currentTheme = theme === 'system' ? systemTheme : theme;
   const isDark = currentTheme === 'dark';

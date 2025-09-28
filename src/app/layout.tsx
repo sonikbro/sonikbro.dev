@@ -4,19 +4,67 @@ import { Analytics } from '@vercel/analytics/next';
 import type { Metadata } from 'next';
 import "../styles/globals.scss";
 
+const siteDomain = 'sonikbro.dev';
+const siteUrl = `https://${siteDomain}`;
+const description = 'Aloha! 👋 I’m Anatolii, the software developer.'
+const keywords = ['Anatolii', 'Software Developer', 'Web Developer', 'Frontend', 'Backend', 'React', 'Next.js', 'JavaScript', 'TypeScript', 'Portfolio'];
+
 export const metadata: Metadata = {
-  title: "sonikbro.dev",
-  description: "Personal website and blog",
-  metadataBase: new URL("https://sonikbro.dev"),
+  title: {
+    default: siteDomain,
+    template: `%s · ${siteDomain}`,
+  },
+  description: description,
+  keywords: keywords,
+  authors: [{ name: 'Anatolii', url: siteUrl }],
+  creator: 'Anatolii',
+  publisher: 'Anatolii',
+  applicationName: siteDomain,
+  referrer: 'origin-when-cross-origin',
+  metadataBase: new URL(siteUrl),
+  category: 'technology',
+  classification: 'Personal Portfolio Website',
+  abstract: 'Personal portfolio website of Anatolii - Software Developer specializing in modern web technologies',
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
     locale: "en_US",
     type: "website",
-    url: "https://sonikbro.dev",
-    siteName: "sonikbro.dev",
-    description: "Personal website and blog",
+    url: siteUrl,
+    title: siteDomain,
+    siteName: siteDomain,
+    description: description,
+    images: [
+      {
+        url: "/img/avatar-full.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Anatolii - Software Developer",
+      }
+    ],
+    countryName: 'Ukraine',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteDomain,
+    description: description,
+    images: ["/img/avatar-full.jpg"],
+    creator: '@sonikbro',
+    site: '@sonikbro',
   },
   alternates: {
-    canonical: "https://sonikbro.dev",
+    canonical: siteUrl,
   },
   icons: {
     apple: "/favicon/apple-touch-icon.png",
@@ -26,8 +74,17 @@ export const metadata: Metadata = {
     ],
   },
   manifest: "/favicon/site.webmanifest",
+  formatDetection: {
+    telephone: false,
+  },
   other: {
-    "preconnect": "https://sonikbro.dev",
+    "preconnect": siteUrl,
+    "distribution": "global",
+    "rating": "general",
+    "revisit-after": "7 days",
+    "language": "en",
+    "coverage": "worldwide",
+    "target": "all",
   },
 };
 

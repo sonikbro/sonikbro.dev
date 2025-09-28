@@ -1,12 +1,6 @@
-import type { Metadata } from "next";
 import Image from 'next/image';
 import avatar from '../../public/img/avatar.png'
 import styles from './page.module.scss'
-
-export const metadata: Metadata = {
-  title: 'Aloha!',
-  description: 'Welcome to my personal website',
-}
 
 export default function Page() {
   const yearsExperience = 6;
@@ -29,11 +23,11 @@ export default function Page() {
         />
       </div>
 
-      <p className={styles.heroDescription}>
-        👨‍💻 I have been working in web development for over {yearsExperience}+ years and have extensive experience using technologies such as React, Redux, TypeScript, and many others web technologies.
+      <p>
+        👨‍💻 Experienced web developer with {yearsExperience}+ years of expertise in building scalable web applications. I specialize in React, Redux, TypeScript, and modern JavaScript frameworks, delivering high-quality solutions that drive business growth.
       </p>
-      <p className={styles.heroDescription}>
-        🚀 I am constantly engaged in self-improvement because I believe that learning is the key to success in the field of programming. I always stay up to date with new products and trends in the industry to keep up with the latest technologies and approaches.
+      <p>
+        🚀 Passionate about crafting clean, maintainable code and staying at the forefront of technology. I continuously evolve my skill set to leverage the latest tools and methodologies, ensuring optimal performance and user experience in every project I deliver.
       </p>
     </section>
   );

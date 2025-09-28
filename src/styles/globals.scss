@@ -74,17 +74,6 @@
     --dev-font-size: calc(0.5vw + 1rem);
 }
 
-a {
-    &.outline[aria-current="true"] {
-        --dev-color: var(--dev-color);
-        background-color: var(--dev-primary-focus);
-
-        &:not(:focus-visible) {
-            box-shadow: 0 0 0 var(--dev-outline-width) var(--dev-primary-hover-border);
-        }
-    }
-}
-
 .deskonly {
     @media (max-width: 768px) {
         display: none;
