@@ -21,6 +21,16 @@ const ContentMeta: FC<IProps> = ({ metadata, isShowContentParams, titleTag = 'h1
       {
         isShowContentParams && (
           <aside>
+            {timeRead && (
+              <span>
+                {timeRead} min to read
+              </span>
+            )}
+            {
+              (timeRead && date) && (
+                <span> · </span>
+              )
+            }
             {date && (
               <time dateTime={date}>
                 {new Date(date).toLocaleDateString('en-US', {
@@ -29,12 +39,6 @@ const ContentMeta: FC<IProps> = ({ metadata, isShowContentParams, titleTag = 'h1
                   day: 'numeric'
                 })}
               </time>
-            )}
-            <span> · </span>
-            {timeRead && (
-              <span>
-                {timeRead} min read
-              </span>
             )}
           </aside>
         )

@@ -7,7 +7,7 @@ interface IProps {
   items: ContentItem[];
   path: string;
   title: string;
-  description: string;
+  description?: string;
 }
 
 const ContentList: FC<IProps> = ({ items, path, title, description }) => {
@@ -47,7 +47,9 @@ const ContentList: FC<IProps> = ({ items, path, title, description }) => {
     <section>
       <header>
         <h1>{title}</h1>
-        <p>{description}</p>
+        {description && (
+          <p>{description}</p>
+        )}
       </header>
 
       {getList()}

@@ -1,0 +1,29 @@
+.Header {
+    position: sticky;
+    top: 0;
+    padding-bottom: 0;
+    background-color: var(--dev-background-color);
+
+    &__linksNav {
+        li {
+            margin-inline: 0.3rem;
+        }
+    }
+
+    &__outlineLink {
+        --dev-nav-link-spacing-vertical: 0.2rem;
+
+        &[aria-current="true"] {
+            --dev-color: var(--dev-color);
+            background-color: var(--dev-primary-focus);
+
+            &:not(:focus-visible) {
+                box-shadow: 0 0 0 var(--dev-outline-width) var(--dev-primary-hover-border);
+            }
+        }
+    }
+
+    &__linkMain {
+        text-decoration: none;
+    }
+}

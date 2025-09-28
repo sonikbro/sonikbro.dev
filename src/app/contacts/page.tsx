@@ -6,7 +6,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const { metadata } = getContactsContent();
 
   return {
-    title: metadata.title,
+    title: 'contacts',
     description: metadata.description,
   };
 }

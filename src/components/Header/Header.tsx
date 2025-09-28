@@ -4,6 +4,7 @@ import { usePathname } from 'next/navigation';
 import { FC, memo } from 'react';
 import Link from "next/link";
 import ThemeToggle from '@components/ThemeToggle/ThemeToggle';
+import styles from './Header.module.scss'
 
 const MAIN_PATH = '/';
 
@@ -26,18 +27,18 @@ const Header: FC = () => {
   const pathname = usePathname();
 
   return (
-    <header>
+    <header className={styles.Header}>
       <nav>
         <ul className={'deskonly'}>
           <li>
             <strong>
-              <Link href={MAIN_PATH} className={'contrast'}>
+              <Link href={MAIN_PATH} className={styles.Header__linkMain}>
                 {'/'}sonikbro.dev
               </Link>
             </strong>
           </li>
         </ul>
-        <ul>
+        <ul className={styles.Header__linksNav}>
           {paths.map(path => {
             const isActive = path.link === '/'
               ? pathname === path.link
@@ -45,7 +46,7 @@ const Header: FC = () => {
 
             return (
               <li key={path.link}>
-                <Link href={path.link} className={'outline'} aria-current={isActive}>
+                <Link href={path.link} className={styles.Header__outlineLink} aria-current={isActive}>
                   {path.label}
                 </Link>
               </li>

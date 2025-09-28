@@ -3,7 +3,7 @@ import { getAllPosts } from "@api/posts";
 import ContentList from "@components/ContentList/ContentList";
 
 export const metadata: Metadata = {
-  title: "Posts",
+  title: "posts",
   description: "All posts",
 };
 
@@ -13,9 +13,8 @@ export default function Posts() {
   return (
     <ContentList
       items={posts}
-      path="posts"
-      title={'Posts'}
-      description={"All posts"}
+      path={"posts"}
+      title={"All posts"}
     />
   );
 };
