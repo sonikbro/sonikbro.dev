@@ -24,10 +24,10 @@ export default function Page() {
       </div>
 
       <p>
-        👨‍💻 Experienced web developer with {yearsExperience}+ years of expertise in building scalable web applications. I specialize in React, Redux, TypeScript, and modern JavaScript frameworks, delivering high-quality solutions that drive business growth.
+        👨‍💻 Experienced web developer with {yearsExperience}+ years of expertise in building scalable web applications.<br/> I specialize in React, Redux, TypeScript, and modern JavaScript frameworks, delivering high-quality solutions that drive business growth.
       </p>
       <p>
-        🚀 Passionate about crafting clean, maintainable code and staying at the forefront of technology. I continuously evolve my skill set to leverage the latest tools and methodologies, ensuring optimal performance and user experience in every project I deliver.
+        🚀 Passionate about crafting clean, maintainable code and staying at the forefront of technology.<br/> I continuously evolve my skill set to leverage the latest tools and methodologies, ensuring optimal performance and user experience in every project I deliver.
       </p>
     </section>
   );
