@@ -3,7 +3,8 @@ import { getPostBySlug } from '@api/posts';
 import ContentEntity from '@components/ContentEntity/ContentEntity';
 import Link from 'next/link';
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+export async function generateMetadata(props: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const params = await props.params;
   const { metadata } = getPostBySlug(params.slug);
 
   return {
@@ -13,10 +14,11 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 interface SinglePostProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
-export default function SinglePost({ params }: SinglePostProps) {
+export default async function SinglePost(props: SinglePostProps) {
+  const params = await props.params;
   const post = getPostBySlug(params.slug);
 
   return (
