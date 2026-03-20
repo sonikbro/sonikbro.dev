@@ -13,6 +13,3 @@ The following is a list of social networks. Browse them to find more information
 - [Github](https://github.com/sonikbro)
 - [Telegram](https://t.me/sonikbro)
 - [Facebook](https://www.facebook.com/soniikbro/)
-- [Instagram](https://www.instagram.com/sonikbro/)
-- [Twitter](https://twitter.com/sonikbro)
-- [Bluesky](https://bsky.app/profile/sonikbro.bsky.social)
