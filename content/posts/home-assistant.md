@@ -38,7 +38,7 @@ I never tried (and frankly didn't know how) to build everything on a single prot
 
 Instead of just tapping buttons on my phone, I focused on automations that understand context and work for me, not through me.
 
-### 1. Energy Safety
+### 1. Energy and Safety
 
 In the current reality, this is priority number one. I have two portable power stations from different brands integrated into the system.
 
@@ -51,7 +51,7 @@ In the current reality, this is priority number one. I have two portable power s
 🚨 **Air raid alert aggregator.** Home Assistant monitors several air raid alert sources through a specialized integration. The automation fires when any source picks up a threat for my specific district (in Kyiv right now, this is very much a real need), sending a notification about a nearby threat. The push breaks through iOS silent mode (`critical: 1`, `interruption_level: critical`) and includes the latest message about the threat type. Three sources instead of one — redundancy that's absolutely worth it here. There's also the official [Ukraine Alarm](https://www.home-assistant.io/integrations/ukraine_alarm/) integration.
 
 
-### 2. Physical Buttons: Tactile Control
+### 2. Physical Buttons
 
 One thing I totally underestimated at first — wireless Zigbee buttons. Cheap, no wires, and via Zigbee2MQTT each one supports multiple actions: single press, double press, and long press.
 
@@ -70,7 +70,7 @@ This is the trickiest automation layer. At its core is the [Adaptive Lighting](h
 
 ☀️ During the day — a cool, alert spectrum; 🌙 at night — warm, dim light to wind down for sleep.
 
-🚶 **Auto-on by motion.** Rooms have motion sensors with lux measurement. Lights only kick in when it's dark (`illuminance < 50 lux`) and there's motion. No motion for 5 minutes — lights off. Super handy in the kitchen: walk in — lights on, walk out — lights off.
+🚶 **Auto-on by motion.** Rooms have motion sensors with lux measurement. Lights only kick in when it's dark (`illuminance < 100lux`) and there's motion. No motion for 5 minutes — lights off. Super handy in the kitchen: walk in — lights on, walk out — lights off.
 
 ✋ **Manual Override.** The biggest headache with any automation: it turns the lights on when you want darkness. I solved this by checking the event context. When I manually switch off a lamp, the system detects it through the missing `parent_id` in `trigger.to_state.context` — meaning the action came from a human, not an automation. The adaptive mode flag for that zone gets disabled, and the automation backs off. Turn the light back on manually — the flag resets, automation kicks back in. This pattern is used in every room. It's elegant because it doesn't need extra buttons or modes — the system just "gets" whether the action was mine.
 
