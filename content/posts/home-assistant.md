@@ -1,5 +1,5 @@
 ---
-title: "My Smart Home on Home Assistant"
+title: "Smart Home"
 description: "How I built a smart home with Home Assistant using Zigbee, BLE, Wi-Fi and a bunch of automations"
 date: 2026-04-06
 type: post
