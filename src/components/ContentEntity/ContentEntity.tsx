@@ -2,6 +2,7 @@ import { FC, memo } from 'react';
 import { ContentMetadata } from '@type/content'
 import ContentMeta from '@components/ContentMeta/ContentMeta';
 import MarkdownView from '@components/MarkdownView/MarkdownView';
+import Comments from '@components/Comments/Comments';
 
 interface IProps {
   metadata: ContentMetadata;
@@ -23,6 +24,13 @@ const ContentEntity: FC<IProps> = ({ metadata, content }) => {
       <article>
         <MarkdownView content={content}/>
       </article>
+
+      {isPostType && (
+        <>
+          <hr/>
+          <Comments slug={metadata.slug} />
+        </>
+      )}
     </section>
   );
 };
