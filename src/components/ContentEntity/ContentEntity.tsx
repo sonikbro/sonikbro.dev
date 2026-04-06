@@ -13,17 +13,19 @@ const ContentEntity: FC<IProps> = ({ metadata, content }) => {
   const isPostType = metadata.type === 'post';
 
   return (
-    <section>
-      <ContentMeta
-        metadata={metadata}
-        isShowContentParams={isPostType}
-      />
+    <article>
+      <header>
+        <ContentMeta
+          metadata={metadata}
+          isShowContentParams={isPostType}
+        />
+      </header>
 
       {isPostType && <hr/>}
 
-      <article>
+      <section>
         <MarkdownView content={content}/>
-      </article>
+      </section>
 
       {isPostType && (
         <>
@@ -31,7 +33,7 @@ const ContentEntity: FC<IProps> = ({ metadata, content }) => {
           <Comments slug={metadata.slug} />
         </>
       )}
-    </section>
+    </article>
   );
 };
 

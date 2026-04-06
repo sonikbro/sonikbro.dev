@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
 import { getAllPosts } from "@api/posts";
 import ContentList from "@components/ContentList/ContentList";
+import { siteUrl } from '@utils/site';
 
 export const metadata: Metadata = {
-  title: "posts",
-  description: "All posts",
+  title: "Blog",
+  description: "Articles about web development, tools, and software engineering by Anatolii",
+  alternates: {
+    canonical: `${siteUrl}/posts`,
+  },
 };
 
 export default function Posts() {

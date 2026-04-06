@@ -1,7 +1,7 @@
 import "../styles/globals.scss";
 
 import type { Metadata } from "next";
-import Link from 'next/link';
+import BackLink from '@components/BackLink/BackLink';
 
 export const metadata: Metadata = {
   title: '404 - Page Not Found',
@@ -35,7 +35,7 @@ export default function GlobalNotFound() {
                 changed, or it is temporary unavailable.
               </small>
               <footer>
-                <Link role={"button"} href={`/`}>← Back to homepage</Link>
+                <BackLink href="/" label="homepage" />
               </footer>
             </article>
           </section>

@@ -12,11 +12,14 @@ interface IProps {
 const ContentLink: FC<IProps> = ({ metadata, baseUrl }) => {
   return (
     <Link href={`${baseUrl}/${metadata.slug}`} className={styles.ContentLink}>
-      <ContentMeta
-        metadata={metadata}
-        isShowContentParams={true}
-        titleTag={'h3'}
-      />
+      <article>
+        <ContentMeta
+          metadata={metadata}
+          isShowContentParams={true}
+          titleTag={'h3'}
+          compact
+        />
+      </article>
     </Link>
   );
 };

@@ -3,6 +3,13 @@ title: Hello, World!
 description: Let's get acquainted
 date: 2022-07-15
 type: post
+keywords:
+  - Anatolii Melnyk
+  - software developer
+  - Ukraine
+  - frontend developer
+  - React
+  - TypeScript
 ---
 
 Hi! I’m Anatolii Melnyk, a software developer from Ukraine.

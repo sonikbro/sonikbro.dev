@@ -1,13 +1,15 @@
-.heroCard {
-    margin-bottom: calc(var(--dev-typography-spacing-vertical) * 2);
+@use "../styles/tokens" as tokens;
 
-    @media (min-width: 768px) {
+.heroCard {
+    @include tokens.spacing-vertical(2);
+
+    @include tokens.above(tokens.$bp-md) {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
     }
 
-    @media (max-width: 768px) {
+    @include tokens.below(tokens.$bp-md) {
         text-align: center;
     }
 }

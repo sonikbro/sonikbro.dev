@@ -15,6 +15,7 @@ export interface ContentMetadata {
   timeRead: number;
   description: string;
   date: string;
+  keywords: string[];
 }
 
 export interface ContentItem {

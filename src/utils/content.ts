@@ -49,6 +49,7 @@ export function parseMarkdownFile(filePath: string, slug?: string): ContentItem 
     timeRead: readTime(content),
     description: data.description || '',
     date: data.date || '',
+    keywords: data.keywords || [],
   };
 
   return {

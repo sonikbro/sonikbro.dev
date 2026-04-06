@@ -1,11 +1,10 @@
 import Header from "@components/Header/Header";
 import ThemeProvider from "@components/ThemeProvider/ThemeProvider";
+import JsonLd from "@components/JsonLd/JsonLd";
 import { Analytics } from '@vercel/analytics/next';
 import type { Metadata } from 'next';
+import { siteDomain, siteUrl } from '@utils/site';
 import "../styles/globals.scss";
-
-const siteDomain = 'sonikbro.dev';
-const siteUrl = `https://${siteDomain}`;
 const description = 'Aloha! 👋 I’m Anatolii, the software developer.'
 const keywords = ['Anatolii', 'Software Developer', 'Web Developer', 'Frontend', 'Backend', 'React', 'Next.js', 'JavaScript', 'TypeScript', 'Portfolio'];
 
@@ -77,14 +76,17 @@ export const metadata: Metadata = {
   formatDetection: {
     telephone: false,
   },
-  other: {
-    "preconnect": siteUrl,
-    "distribution": "global",
-    "rating": "general",
-    "revisit-after": "7 days",
-    "language": "en",
-    "coverage": "worldwide",
-    "target": "all",
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: siteDomain,
+  url: siteUrl,
+  author: {
+    '@type': 'Person',
+    name: 'Anatolii',
+    url: siteUrl,
   },
 };
 
@@ -96,6 +98,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
         <body>
+          <JsonLd data={jsonLd} />
           <ThemeProvider>
             <Header/>
             <main>

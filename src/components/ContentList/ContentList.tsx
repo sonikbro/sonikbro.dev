@@ -1,6 +1,8 @@
 import { FC, memo } from 'react';
 import { ContentItem } from '@type/content'
 import ContentLink from '@components/ContentLink/ContentLink';
+import SectionHeader from '@components/SectionHeader/SectionHeader';
+import EmptyState from '@components/EmptyState/EmptyState';
 import styles from './ContentList.module.scss'
 
 interface IProps {
@@ -11,48 +13,31 @@ interface IProps {
 }
 
 const ContentList: FC<IProps> = ({ items, path, title, description }) => {
-  const getList = () => {
-    if(!items.length) {
-      return (
-        <div>
-          <h2>
-            Unfortunately, the list of posts is still empty 😢
-          </h2>
-          <p>Check back soon for new content!</p>
-        </div>
-      )
-    }
+  return (
+    <section>
+      <SectionHeader title={title} description={description} />
 
-    return (
-      <aside>
-        <nav>
-          <ul className={styles.ContentList}>
-            {
-              items.map((item) => (
+      {items.length === 0 ? (
+        <EmptyState
+          title="Unfortunately, the list of posts is still empty 😢"
+          description="Check back soon for new content!"
+        />
+      ) : (
+        <aside>
+          <nav>
+            <ul className={styles.ContentList}>
+              {items.map((item) => (
                 <li key={item.metadata.slug}>
                   <ContentLink
                     metadata={item.metadata}
                     baseUrl={path}
                   />
                 </li>
-              ))
-            }
-          </ul>
-        </nav>
-      </aside>
-    )
-  }
-
-  return (
-    <section>
-      <header>
-        <h1>{title}</h1>
-        {description && (
-          <p>{description}</p>
-        )}
-      </header>
-
-      {getList()}
+              ))}
+            </ul>
+          </nav>
+        </aside>
+      )}
     </section>
   );
 };

@@ -1,13 +1,17 @@
 import type { Metadata } from "next";
 import { getContactsContent } from "@api/contacts";
-import ContentEntity from '@components/ContentEntity/ContentEntity'
+import ContentEntity from '@components/ContentEntity/ContentEntity';
+import { siteUrl } from '@utils/site';
 
 export async function generateMetadata(): Promise<Metadata> {
   const { metadata } = getContactsContent();
 
   return {
-    title: 'contacts',
+    title: 'Contacts',
     description: metadata.description,
+    alternates: {
+      canonical: `${siteUrl}/contacts`,
+    },
   };
 }
 

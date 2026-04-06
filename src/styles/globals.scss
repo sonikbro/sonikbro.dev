@@ -1,3 +1,4 @@
+@use "tokens" as tokens;
 @use "@picocss/pico/scss/pico" with (
     $theme-color: "pumpkin",
     $enable-semantic-container: true,
@@ -72,11 +73,23 @@
 :root,
 :host {
     --dev-font-size: calc(0.5vw + 1rem);
+
+    @include tokens.above(tokens.$bp-md) {
+      --dev-font-size: calc(0.5vw + 0.75rem);
+    }
 }
 
 .deskonly {
-    @media (max-width: 768px) {
+    @include tokens.below(tokens.$bp-md) {
         display: none;
-        visability: hidden;
+        visibility: hidden;
+    }
+}
+
+article figure {
+    text-align: center;
+
+    img {
+        margin-inline: auto;
     }
 }

@@ -1,48 +1,40 @@
 import { createElement, FC, memo } from 'react';
 import { ContentMetadata } from '@type/content'
+import { formatDate } from '@utils/date';
 
 interface IProps {
   metadata: ContentMetadata;
   isShowContentParams: boolean;
-  titleTag?: string
+  titleTag?: string;
+  compact?: boolean;
 }
 
-const ContentMeta: FC<IProps> = ({ metadata, isShowContentParams, titleTag = 'h1' }) => {
+const ContentMeta: FC<IProps> = ({ metadata, isShowContentParams, titleTag = 'h1', compact = false }) => {
   const { title, description, date, timeRead } = metadata;
+  const MetaTag = compact ? 'small' : 'aside';
 
   return (
     <>
-      {createElement(titleTag, {}, title)}
+      <hgroup>
+        {createElement(titleTag, {}, title)}
+        {description && <p>{description}</p>}
+      </hgroup>
 
-      {description && (
-        <p>{description}</p>
+      {isShowContentParams && (
+        <MetaTag>
+          {timeRead && (
+            <span>{timeRead} min to read</span>
+          )}
+          {timeRead && date && (
+            <span> &middot; </span>
+          )}
+          {date && (
+            <time dateTime={date}>
+              {formatDate(date)}
+            </time>
+          )}
+        </MetaTag>
       )}
-
-      {
-        isShowContentParams && (
-          <aside>
-            {timeRead && (
-              <span>
-                {timeRead} min to read
-              </span>
-            )}
-            {
-              (timeRead && date) && (
-                <span> · </span>
-              )
-            }
-            {date && (
-              <time dateTime={date}>
-                {new Date(date).toLocaleDateString('en-US', {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric'
-                })}
-              </time>
-            )}
-          </aside>
-        )
-      }
     </>
   );
 };

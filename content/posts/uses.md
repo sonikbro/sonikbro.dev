@@ -3,6 +3,16 @@ title: My Setup
 description: This is a complete list of tools, programs, services that I use regularly. The list contains tools that I work with as a software developer, as well as tools that I use at home.
 date: 2025-10-01
 type: post
+keywords:
+  - developer tools
+  - macOS apps
+  - Zed editor
+  - VS Code
+  - iTerm2
+  - Raycast
+  - Homebrew
+  - developer setup
+  - productivity apps
 ---
 
 ## Applications

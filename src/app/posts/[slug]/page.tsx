@@ -1,7 +1,9 @@
 import { Metadata } from 'next';
 import { getPostBySlug } from '@api/posts';
 import ContentEntity from '@components/ContentEntity/ContentEntity';
-import Link from 'next/link';
+import JsonLd from '@components/JsonLd/JsonLd';
+import BackLink from '@components/BackLink/BackLink';
+import { siteUrl } from '@utils/site';
 
 export async function generateMetadata(props: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const params = await props.params;
@@ -10,6 +12,21 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
   return {
     title: metadata.title,
     description: metadata.description,
+    keywords: metadata.keywords,
+    openGraph: {
+      title: metadata.title,
+      description: metadata.description,
+      type: 'article',
+      publishedTime: metadata.date,
+      url: `${siteUrl}/posts/${params.slug}`,
+    },
+    twitter: {
+      title: metadata.title,
+      description: metadata.description,
+    },
+    alternates: {
+      canonical: `${siteUrl}/posts/${params.slug}`,
+    },
   };
 }
 
@@ -21,13 +38,29 @@ export default async function SinglePost(props: SinglePostProps) {
   const params = await props.params;
   const post = getPostBySlug(params.slug);
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.metadata.title,
+    description: post.metadata.description,
+    datePublished: post.metadata.date,
+    url: `${siteUrl}/posts/${params.slug}`,
+    keywords: post.metadata.keywords,
+    author: {
+      '@type': 'Person',
+      name: 'Anatolii',
+      url: siteUrl,
+    },
+  };
+
   return (
     <>
+      <JsonLd data={jsonLd} />
       <ContentEntity
          metadata={post.metadata}
          content={post.content}
        />
-      <Link href={`/posts`}>← Back to all posts</Link>
+      <BackLink href="/posts" label="all posts" />
     </>
   );
 };
