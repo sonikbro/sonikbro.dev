@@ -25,29 +25,3 @@ export default function Contacts() {
     />
   );
 }
-
-
-// const [text, setText] = useState<string>('Copy email');
-
-// const handleClick = useCallback(
-//   (event: SyntheticEvent<HTMLButtonElement, Event>): void => {
-//     event.preventDefault();
-
-//   //   navigator?.clipboard.writeText(siteData.email);
-//     setText('Email copied');
-
-//     setTimeout(
-//       () => setText('Copy email'),
-//       2000
-//     );
-//   },
-//   []
-// );
-
-
-// <Button
-//   onClick={handleClick}
-//   ariaLabel={'Copy email'}
-// >
-//   {text}
-// </Button>

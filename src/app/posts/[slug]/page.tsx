@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { getPostBySlug } from '@api/posts';
 import ContentEntity from '@components/ContentEntity/ContentEntity';
+import ReadingProgress from '@components/ReadingProgress/ReadingProgress';
 import JsonLd from '@components/JsonLd/JsonLd';
 import BackLink from '@components/BackLink/BackLink';
 import { siteUrl } from '@utils/site';
@@ -55,6 +56,7 @@ export default async function SinglePost(props: SinglePostProps) {
 
   return (
     <>
+      <ReadingProgress />
       <JsonLd data={jsonLd} />
       <ContentEntity
          metadata={post.metadata}

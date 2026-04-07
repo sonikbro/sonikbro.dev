@@ -1,5 +1,5 @@
 ---
-title: My Setup
+title: Uses
 description: This is a complete list of tools, programs, services that I use regularly. The list contains tools that I work with as a software developer, as well as tools that I use at home.
 date: 2025-10-01
 type: post

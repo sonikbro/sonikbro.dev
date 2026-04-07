@@ -1,7 +1,7 @@
 "use client"
 
 import { usePathname } from 'next/navigation';
-import { FC, memo } from 'react';
+import { FC, memo, useRef, useEffect } from 'react';
 import Link from "next/link";
 import ThemeToggle from '@components/ThemeToggle/ThemeToggle';
 import styles from './Header.module.scss'
@@ -25,9 +25,33 @@ const paths = [
 
 const Header: FC = () => {
   const pathname = usePathname();
+  const headerRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const el = headerRef.current;
+    if (!el) return;
+
+    const update = () => {
+      document.documentElement.style.setProperty('--header-height', `${el.offsetHeight}px`);
+    };
+
+    update();
+    const observer = new ResizeObserver(update);
+    observer.observe(el);
+
+    // Re-scroll to hash after hydration so scroll-margin-top is respected
+    const hash = window.location.hash;
+    if (hash) {
+      requestAnimationFrame(() => {
+        document.getElementById(hash.slice(1))?.scrollIntoView({ behavior: 'instant' });
+      });
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <header className={styles.Header}>
+    <header className={styles.Header} ref={headerRef}>
       <nav>
         <ul className={'deskonly'}>
           <li>

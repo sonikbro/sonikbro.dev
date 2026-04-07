@@ -2,6 +2,7 @@
     position: sticky;
     top: 0;
     padding-bottom: 0;
+    padding-inline: var(--dev-block-spacing-horizontal);
     background-color: var(--dev-background-color);
     z-index: 10;
 
@@ -15,16 +16,17 @@
         --dev-nav-link-spacing-vertical: 0.2rem;
 
         &[aria-current="true"] {
-            --dev-color: var(--dev-color);
-            background-color: var(--dev-primary-focus);
-
-            &:not(:focus-visible) {
-                box-shadow: 0 0 0 var(--dev-outline-width) var(--dev-primary-hover-border);
+            &::after {
+                scale: 1 1;
             }
         }
     }
 
     &__linkMain {
         text-decoration: none;
+
+        &::after {
+            display: none;
+        }
     }
 }

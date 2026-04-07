@@ -1,6 +1,8 @@
 import { FC, memo, ReactNode, Children, isValidElement } from 'react';
 import ReactMarkdown, { Components } from 'react-markdown';
 import rehypeSlug from 'rehype-slug';
+import rehypeHighlight from 'rehype-highlight';
+import 'highlight.js/styles/atom-one-dark.css';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -102,10 +104,6 @@ const defaultComponents: Partial<Components> = {
       </a>
     );
   },
-  // TODO: add support for client components
-  code: (opt) => {
-    return <code>{opt.children}</code>;
-  },
   h3: createLinkedHeading('h3'),
   h4: createLinkedHeading('h4'),
   h5: createLinkedHeading('h5'),
@@ -117,7 +115,7 @@ const MarkdownView: FC<IProps> = ({ content, components }) => {
 
   return (
     <ReactMarkdown
-      rehypePlugins={[rehypeSlug]}
+      rehypePlugins={[rehypeSlug, rehypeHighlight]}
       components={mergedComponents}
     >
       {content}

@@ -1,0 +1,26 @@
+.bar {
+    display: none;
+}
+
+@supports (animation-timeline: scroll()) {
+    .bar {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 3px;
+        width: 100%;
+        background: var(--dev-primary);
+        z-index: 20;
+        transform-origin: left;
+        scale: 0 1;
+        animation: grow auto linear forwards;
+        animation-timeline: scroll();
+    }
+
+    @keyframes grow {
+        to {
+            scale: 1 1;
+        }
+    }
+}

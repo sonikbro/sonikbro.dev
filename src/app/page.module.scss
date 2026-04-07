@@ -1,26 +1,94 @@
 @use "../styles/tokens" as tokens;
 
-.heroCard {
-    @include tokens.spacing-vertical(2);
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: var(--dev-spacing);
+    min-height: 70dvh;
 
-    @include tokens.above(tokens.$bp-md) {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
+    > * {
+        opacity: 0;
+        transform: translateY(1rem);
+        animation: fadeIn 0.6s ease forwards;
+    }
+    > *:nth-child(2) { animation-delay: 0.15s; }
+    > *:nth-child(3) { animation-delay: 0.3s; }
+    > *:nth-child(4) { animation-delay: 0.45s; }
+
+    hgroup {
+        max-width: 760px;
+
+        h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(
+                90deg,
+                var(--dev-color),
+                var(--dev-primary),
+                var(--dev-primary-background),
+                var(--dev-primary),
+                var(--dev-color),
+                var(--dev-primary),
+                var(--dev-primary-background),
+                var(--dev-primary),
+                var(--dev-color)
+            );
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient 10s linear infinite;
+
+            @include tokens.below(tokens.$bp-md) {
+                font-size: 1.75rem;
+            }
+        }
+
+        p {
+            font-size: 1.15rem;
+            color: var(--dev-muted-color);
+        }
     }
 
-    @include tokens.below(tokens.$bp-md) {
-        text-align: center;
+    nav {
+
+        a {
+            font-size: 1.1rem;
+        }
     }
+}
+
+.avatar {
+    border-radius: 50%;
+    margin-bottom: var(--dev-spacing);
+}
+
+.subtitle {
+    color: var(--dev-muted-color);
+    max-width: 640px;
+    font-size: 1rem;
 }
 
 .waveAnimation {
     position: relative;
     display: inline-block;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    -webkit-text-fill-color: initial;
     animation-name: waveAnimation;
     animation-duration: 2.5s;
     animation-iteration-count: infinite;
     transform-origin: 70% 70%;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; transform: none; }
+}
+
+@keyframes gradient {
+    to { background-position: 200% center; }
 }
 
 @keyframes waveAnimation {

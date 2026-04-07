@@ -3,7 +3,16 @@
     background: var(--dev-card-background-color);
     transition: none;
 
-    &:hover {
-        box-shadow: 0 0 0 var(--dev-outline-width) var(--dev-primary-focus);
+    &::after {
+        display: none;
+    }
+
+    article {
+        transition: box-shadow 0.2s ease;
+        margin-bottom: 0;
+    }
+
+    &:hover article {
+        box-shadow: 0 0 0 1px var(--dev-primary-hover-border);
     }
 }
