@@ -1,6 +1,5 @@
 ---
 title: 'Get in touch'
-description: "Contact Anatolii — email, LinkedIn, GitHub, Telegram and other ways to get in touch"
 date: '2024-03-21'
 type: 'page'
 ---
