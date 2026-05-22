@@ -1,4 +1,5 @@
 import Header from "@components/Header/Header";
+import NowPlaying from "@components/NowPlaying/NowPlaying";
 import ThemeProvider from "@components/ThemeProvider/ThemeProvider";
 import JsonLd from "@components/JsonLd/JsonLd";
 import { Analytics } from '@vercel/analytics/next';
@@ -104,7 +105,9 @@ export default function RootLayout({
             <main>
               {children}
             </main>
-            <footer></footer>
+            <footer>
+              <NowPlaying />
+            </footer>
           </ThemeProvider>
           <Analytics />
         </body>

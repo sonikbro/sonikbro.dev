@@ -112,6 +112,16 @@ a:not([role="button"]) {
     scroll-margin-top: var(--header-height, 3.5rem);
 }
 
+body {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+body > main {
+    flex: 1;
+}
+
 article > header {
     border-bottom: none;
 }

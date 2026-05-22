@@ -22,7 +22,7 @@ export default function Page() {
         <p>Software developer from Ukraine 🇺🇦</p>
       </hgroup>
       <nav>
-        <Link href="/posts">Posts &rarr;</Link>
+        <Link href="/posts/hello"><code>$ whoami<span className={styles.cursor}>▌</span></code> &rarr;</Link>
       </nav>
     </section>
   );
