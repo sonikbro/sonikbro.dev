@@ -1,5 +1,7 @@
 'use client'
 
+import { useEffect, useState } from 'react'
+
 const greetings = [
   { start: 5, end: 12, text: 'Good morning' },
   { start: 12, end: 18, text: 'Good afternoon' },
@@ -12,5 +14,11 @@ function getGreeting() {
 }
 
 export default function Greeting() {
-  return <span suppressHydrationWarning>{getGreeting()}</span>
+  const [greeting, setGreeting] = useState('Hello')
+
+  useEffect(() => {
+    setGreeting(getGreeting())
+  }, [])
+
+  return <span>{greeting}</span>
 }

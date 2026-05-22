@@ -1,16 +1,18 @@
 import { createElement, FC, memo } from 'react';
 import { ContentMetadata } from '@type/content'
 import { formatDate } from '@utils/date';
+import PostStats from '@components/PostStats/PostStats';
 
 interface IProps {
   metadata: ContentMetadata;
   isShowContentParams: boolean;
   titleTag?: string;
   compact?: boolean;
+  showStats?: boolean;
 }
 
-const ContentMeta: FC<IProps> = ({ metadata, isShowContentParams, titleTag = 'h1', compact = false }) => {
-  const { title, description, date, timeRead } = metadata;
+const ContentMeta: FC<IProps> = ({ metadata, isShowContentParams, titleTag = 'h1', compact = false, showStats = false }) => {
+  const { title, description, date, timeRead, slug } = metadata;
   const MetaTag = compact ? 'small' : 'aside';
 
   return (
@@ -32,6 +34,12 @@ const ContentMeta: FC<IProps> = ({ metadata, isShowContentParams, titleTag = 'h1
             <time dateTime={date}>
               {formatDate(date)}
             </time>
+          )}
+          {showStats && (
+            <>
+              <span> &middot; </span>
+              <PostStats slug={slug} />
+            </>
           )}
         </MetaTag>
       )}

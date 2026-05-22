@@ -1,0 +1,24 @@
+.stats {
+    display: inline-flex;
+    gap: 0.75em;
+    font-variant-numeric: tabular-nums;
+}
+
+.skeleton {
+    display: inline-block;
+    width: 2.5em;
+    height: 1em;
+    border-radius: 0.25em;
+    background: linear-gradient(
+        90deg,
+        var(--dev-muted-border-color) 0%,
+        var(--dev-card-background-color) 50%,
+        var(--dev-muted-border-color) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.4s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    to { background-position: -200% 0; }
+}

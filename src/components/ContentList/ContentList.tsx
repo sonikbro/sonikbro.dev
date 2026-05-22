@@ -10,9 +10,10 @@ interface IProps {
   path: string;
   title: string;
   description?: string;
+  showStats?: boolean;
 }
 
-const ContentList: FC<IProps> = ({ items, path, title, description }) => {
+const ContentList: FC<IProps> = ({ items, path, title, description, showStats = false }) => {
   return (
     <section>
       <SectionHeader title={title} description={description} />
@@ -31,6 +32,7 @@ const ContentList: FC<IProps> = ({ items, path, title, description }) => {
                   <ContentLink
                     metadata={item.metadata}
                     baseUrl={path}
+                    showStats={showStats}
                   />
                 </li>
               ))}

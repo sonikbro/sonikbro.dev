@@ -19,6 +19,7 @@ export default function Posts() {
       items={posts}
       path={"posts"}
       title={"All posts"}
+      showStats
     />
   );
 };

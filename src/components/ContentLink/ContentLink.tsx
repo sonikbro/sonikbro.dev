@@ -7,9 +7,10 @@ import styles from './ContentLink.module.scss'
 interface IProps {
   metadata: ContentMetadata;
   baseUrl: string;
+  showStats?: boolean;
 }
 
-const ContentLink: FC<IProps> = ({ metadata, baseUrl }) => {
+const ContentLink: FC<IProps> = ({ metadata, baseUrl, showStats = false }) => {
   return (
     <Link href={`${baseUrl}/${metadata.slug}`} className={styles.ContentLink}>
       <article>
@@ -18,6 +19,7 @@ const ContentLink: FC<IProps> = ({ metadata, baseUrl }) => {
           isShowContentParams={true}
           titleTag={'h3'}
           compact
+          showStats={showStats}
         />
       </article>
     </Link>

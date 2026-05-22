@@ -268,7 +268,7 @@ Running on a **Raspberry Pi 5** (8 GB RAM).
 
 ![Raspberry Pi on the shelf {768x432}{caption: Early days — cables everywhere, zero aesthetics}](/content/ha/rp2.jpg)
 
-The photos above were taken before I realized how much aesthetics matter for a home server. Eventually I tucked everything — the router and the Raspberry Pi — into a single cheap plastic enclosure. Clean, compact, and out of sight.
+The photos above were taken before I realized how much aesthetics matter for a home server. Eventually I tucked everything — the router and the Raspberry Pi — into a single cheap plastic enclosure. Clean, compact, and out of sight :)
 
 ![Server and router tucked into a plastic enclosure {768x432}{caption: After the glow-up — everything hidden in one box}](/content/ha/box.jpg)
 
@@ -296,13 +296,12 @@ The photos above were taken before I realized how much aesthetics matter for a h
 - **Google Calendar** — schedule integration into automations
 
 ### 🔧 Helpers:
-15 helpers in total — the "glue" between automations:
 - **Sensor groups** — aggregated light, humidity, and temperature readings across the apartment
 - **Mode flags** — manual override control for each zone
 - **Device states** — tracking work cycles and power
 - **Text input** for AI experiments
 
-![Helper entities list {768x432}{caption: 15 helpers — sensor groups, mode flags, and device states that glue automations together}](/content/ha/helpers.jpg)
+![Helper entities list {768x432}{caption: helpers — sensor groups, mode flags, and device states that glue automations together}](/content/ha/helpers.jpg)
 
 ### 🎨 Visualization:
 - **[Mushroom](https://github.com/piitaya/lovelace-mushroom)** — the dashboard foundation

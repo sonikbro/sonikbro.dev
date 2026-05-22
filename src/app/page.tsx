@@ -19,13 +19,10 @@ export default function Page() {
         <h1>
           <strong><Greeting />! <span className={styles.waveAnimation}>👋</span><br />I{"'"}m Anatolii</strong>
         </h1>
-        <p>Software developer from Ukraine 🇺🇦<br />I build things for the web and tinker with smart home automation.</p>
+        <p>Software developer from Ukraine 🇺🇦</p>
       </hgroup>
-      <p className={styles.subtitle}>
-        My corner of the internet —<br />where I write about what I learn, break, and build.
-      </p>
       <nav>
-        <Link href="/posts">Read my thoughts &rarr;</Link>
+        <Link href="/posts">Posts &rarr;</Link>
       </nav>
     </section>
   );
