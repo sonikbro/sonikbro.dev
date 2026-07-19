@@ -35,7 +35,7 @@ export default function GlobalNotFound() {
                 changed, or it is temporary unavailable.
               </small>
               <footer>
-                <BackLink href="/" label="homepage" />
+                <BackLink href="/" label="homepage" hard />
               </footer>
             </article>
           </section>

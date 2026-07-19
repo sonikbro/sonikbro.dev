@@ -1,5 +1,6 @@
 ---
 title: 'Get in touch'
+description: 'Get in touch with Anatolii Melnyk — email, GitHub, LinkedIn, Telegram, and Facebook.'
 date: '2024-03-21'
 type: 'page'
 ---

@@ -1,7 +1,7 @@
 "use client"
 
 import { usePathname } from 'next/navigation';
-import { FC, memo, useRef, useEffect } from 'react';
+import { FC, useRef, useEffect } from 'react';
 import Link from "next/link";
 import ThemeToggle from '@components/ThemeToggle/ThemeToggle';
 import styles from './Header.module.scss'
@@ -88,4 +88,4 @@ const Header: FC = () => {
   );
 };
 
-export default memo(Header);
+export default Header;

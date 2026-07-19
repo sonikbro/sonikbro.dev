@@ -1,10 +1,17 @@
 import { Metadata } from 'next';
-import { getPostBySlug } from '@api/posts';
+import { getPostBySlug, getPostSlugs } from '@api/posts';
 import ContentEntity from '@components/ContentEntity/ContentEntity';
 import ReadingProgress from '@components/ReadingProgress/ReadingProgress';
 import JsonLd from '@components/JsonLd/JsonLd';
 import BackLink from '@components/BackLink/BackLink';
+import RssLink from '@components/RssLink/RssLink';
 import { siteUrl } from '@utils/site';
+
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return getPostSlugs().map((slug) => ({ slug }));
+}
 
 export async function generateMetadata(props: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const params = await props.params;
@@ -38,6 +45,7 @@ interface SinglePostProps {
 export default async function SinglePost(props: SinglePostProps) {
   const params = await props.params;
   const post = getPostBySlug(params.slug);
+  const postUrl = `${siteUrl}/posts/${params.slug}`;
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -45,7 +53,10 @@ export default async function SinglePost(props: SinglePostProps) {
     headline: post.metadata.title,
     description: post.metadata.description,
     datePublished: post.metadata.date,
-    url: `${siteUrl}/posts/${params.slug}`,
+    dateModified: post.metadata.date,
+    image: `${postUrl}/opengraph-image`,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': postUrl },
+    url: postUrl,
     keywords: post.metadata.keywords,
     author: {
       '@type': 'Person',
@@ -62,7 +73,10 @@ export default async function SinglePost(props: SinglePostProps) {
          metadata={post.metadata}
          content={post.content}
        />
-      <BackLink href="/posts" label="all posts" />
+      <footer style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem' }}>
+        <BackLink href="/posts" label="all posts" />
+        <RssLink />
+      </footer>
     </>
   );
 };

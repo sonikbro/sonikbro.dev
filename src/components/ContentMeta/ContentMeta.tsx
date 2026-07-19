@@ -1,7 +1,8 @@
-import { createElement, FC, memo } from 'react';
+import { createElement, FC } from 'react';
 import { ContentMetadata } from '@type/content'
 import { formatDate } from '@utils/date';
 import PostStats from '@components/PostStats/PostStats';
+import styles from './ContentMeta.module.scss';
 
 interface IProps {
   metadata: ContentMetadata;
@@ -37,7 +38,7 @@ const ContentMeta: FC<IProps> = ({ metadata, isShowContentParams, titleTag = 'h1
           )}
           {showStats && (
             <>
-              <span> &middot; </span>
+              <span className={styles.statsSeparator}> &middot; </span>
               <PostStats slug={slug} />
             </>
           )}
@@ -47,4 +48,4 @@ const ContentMeta: FC<IProps> = ({ metadata, isShowContentParams, titleTag = 'h1
   );
 };
 
-export default memo(ContentMeta);
+export default ContentMeta;

@@ -20,7 +20,6 @@ export const metadata: Metadata = {
   creator: 'Anatolii',
   publisher: 'Anatolii',
   applicationName: siteDomain,
-  referrer: 'origin-when-cross-origin',
   metadataBase: new URL(siteUrl),
   category: 'technology',
   classification: 'Personal Portfolio Website',
@@ -45,26 +44,20 @@ export const metadata: Metadata = {
     title: siteDomain,
     siteName: siteDomain,
     description: description,
-    images: [
-      {
-        url: "/img/avatar-full.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Anatolii - Software Developer",
-      }
-    ],
     countryName: 'Ukraine',
   },
   twitter: {
     card: 'summary_large_image',
     title: siteDomain,
     description: description,
-    images: ["/img/avatar-full.jpg"],
     creator: '@sonikbro',
     site: '@sonikbro',
   },
   alternates: {
     canonical: siteUrl,
+    types: {
+      'application/rss+xml': `${siteUrl}/feed.xml`,
+    },
   },
   icons: {
     apple: "/favicon/apple-touch-icon.png",

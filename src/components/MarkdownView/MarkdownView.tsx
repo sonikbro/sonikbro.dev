@@ -1,4 +1,4 @@
-import { FC, memo, ReactNode, Children, isValidElement } from 'react';
+import { FC, ReactNode, Children, isValidElement } from 'react';
 import ReactMarkdown, { Components } from 'react-markdown';
 import rehypeSlug from 'rehype-slug';
 import rehypeHighlight from 'rehype-highlight';
@@ -123,4 +123,4 @@ const MarkdownView: FC<IProps> = ({ content, components }) => {
   );
 };
 
-export default memo(MarkdownView);
+export default MarkdownView;

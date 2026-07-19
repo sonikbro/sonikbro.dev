@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getAllPosts } from "@api/posts";
 import ContentList from "@components/ContentList/ContentList";
+import RssLink from "@components/RssLink/RssLink";
 import { siteUrl } from '@utils/site';
 
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ export default function Posts() {
       path={"posts"}
       title={"All posts"}
       showStats
+      action={<RssLink />}
     />
   );
 };

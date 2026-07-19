@@ -1,6 +1,4 @@
-'use client'
-
-import { useEffect, useState } from 'react'
+import { headers } from 'next/headers'
 
 const greetings = [
   { start: 5, end: 12, text: 'Good morning' },
@@ -8,17 +6,21 @@ const greetings = [
   { start: 18, end: 23, text: 'Good evening' },
 ]
 
-function getGreeting() {
-  const hour = new Date().getHours()
-  return greetings.find(g => hour >= g.start && hour < g.end)?.text ?? 'Aloha'
+function getGreeting(tz: string): string {
+  let hour: number
+  try {
+    hour = parseInt(
+      new Intl.DateTimeFormat('en-US', { hour: 'numeric', hour12: false, timeZone: tz }).format(new Date()),
+      10,
+    ) % 24
+  } catch {
+    return 'Aloha'
+  }
+  return greetings.find((g) => hour >= g.start && hour < g.end)?.text ?? 'Aloha'
 }
 
-export default function Greeting() {
-  const [greeting, setGreeting] = useState('Hello')
 
-  useEffect(() => {
-    setGreeting(getGreeting())
-  }, [])
-
-  return <span>{greeting}</span>
+export default async function Greeting() {
+  const tz = (await headers()).get('x-vercel-ip-timezone') ?? 'UTC'
+  return <span>{getGreeting(tz)}</span>
 }

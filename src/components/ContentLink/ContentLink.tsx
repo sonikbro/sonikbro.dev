@@ -1,4 +1,4 @@
-import { FC, memo } from 'react';
+import { FC } from 'react';
 import Link from "next/link";
 import { ContentMetadata } from '@type/content'
 import ContentMeta from '@components/ContentMeta/ContentMeta';
@@ -26,4 +26,4 @@ const ContentLink: FC<IProps> = ({ metadata, baseUrl, showStats = false }) => {
   );
 };
 
-export default memo(ContentLink);
+export default ContentLink;

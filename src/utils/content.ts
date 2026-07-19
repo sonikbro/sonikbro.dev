@@ -59,6 +59,10 @@ export function parseMarkdownFile(filePath: string, slug?: string): ContentItem 
 }
 
 export function getContentBySlug(contentType: ContentType, slug: string): ContentItem {
+  if (!/^[\w-]+$/.test(slug)) {
+    throw new Error(`Invalid slug: ${slug}`);
+  }
+
   const directory = getContentDirectory(contentType);
   const documentFile = `${slug}.md`;
   const fullPath = path.join(directory, documentFile);

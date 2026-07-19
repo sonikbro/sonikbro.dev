@@ -1,4 +1,4 @@
-import { FC, memo } from 'react';
+import { FC, ReactNode } from 'react';
 import { ContentItem } from '@type/content'
 import ContentLink from '@components/ContentLink/ContentLink';
 import SectionHeader from '@components/SectionHeader/SectionHeader';
@@ -11,12 +11,13 @@ interface IProps {
   title: string;
   description?: string;
   showStats?: boolean;
+  action?: ReactNode;
 }
 
-const ContentList: FC<IProps> = ({ items, path, title, description, showStats = false }) => {
+const ContentList: FC<IProps> = ({ items, path, title, description, showStats = false, action }) => {
   return (
     <section>
-      <SectionHeader title={title} description={description} />
+      <SectionHeader title={title} description={description} action={action} />
 
       {items.length === 0 ? (
         <EmptyState
@@ -44,4 +45,4 @@ const ContentList: FC<IProps> = ({ items, path, title, description, showStats = 
   );
 };
 
-export default memo(ContentList);
+export default ContentList;

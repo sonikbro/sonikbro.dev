@@ -1,4 +1,4 @@
-import { FC, memo } from 'react';
+import { FC } from 'react';
 import { ContentMetadata } from '@type/content'
 import ContentMeta from '@components/ContentMeta/ContentMeta';
 import MarkdownView from '@components/MarkdownView/MarkdownView';
@@ -37,4 +37,4 @@ const ContentEntity: FC<IProps> = ({ metadata, content }) => {
   );
 };
 
-export default memo(ContentEntity);
+export default ContentEntity;

@@ -4,6 +4,12 @@
     font-variant-numeric: tabular-nums;
 }
 
+@media (max-width: 768px) {
+    .stats {
+        display: flex;
+    }
+}
+
 .skeleton {
     display: inline-block;
     width: 2.5em;
